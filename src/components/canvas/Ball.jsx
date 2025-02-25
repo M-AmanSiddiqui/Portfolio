@@ -55,3 +55,4 @@ const BallCanvas = ({ icon }) => {
 };
 
 export default BallCanvas;
+

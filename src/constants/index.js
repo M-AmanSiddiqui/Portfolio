@@ -1,25 +1,37 @@
 import {
-  mobile,
+  
   backend,
   creator,
+  mobile,
   web,
-  javascript,
-  typescript,
-  html,
+  
   css,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
   reactjs,
   redux,
+  Bootstrap,
   tailwind,
-  nodejs,
-  mongodb,
-  git,
-  stolid,
+  typescript,
+  threejs,
   smit,
+  stolid,
   carrent,
   jobit,
   tripguide,
-  threejs,
-  Bootstrap,
+  nextjs,
+  
+  vercel,
+  netlify,
+  antd,
+  firebase,
+  framermotion,
+  materialUI,
+  shadecn,
+  expressjs,
 } from "../assets";
 
 export const navLinks = [
@@ -62,6 +74,10 @@ const technologies = [
     icon: html,
   },
   {
+    name: "Next js",
+    icon: nextjs,
+  },
+  {
     name: "CSS 3",
     icon: css,
   },
@@ -101,14 +117,16 @@ const technologies = [
     name: "Three JS",
     icon: threejs,
   },
+ 
   {
-    name: "git",
-    icon: git,
+    name: "Vercel",
+    icon: vercel,
   },
+
+ 
  
 
 ];
-
 const experiences = [
   {
     title: "Web Development Intern",

@@ -8,6 +8,16 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
+import nextjs from "./tech/next js.png";
+import vercel from "./tech/vercel.png";
+import netlify from "./tech/netlify.png";
+import antd from "./tech/antd.png";
+import firebase from "./tech/firebase.png";
+import framermotion from "./tech/framer motion.jpg";
+import materialUI from "./tech/material ui.png";
+import shadecn from "./tech/shadecn.jpg";
+import expressjs from "./tech/express js.png";
+
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -18,7 +28,8 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import Bootstrap from './tech/bootstrap.png'
+import Bootstrap from "./tech/bootstrap.png";
+
 import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
@@ -52,4 +63,14 @@ export {
   carrent,
   jobit,
   tripguide,
+  nextjs,
+
+  vercel,
+  netlify,
+  antd,
+  firebase,
+  framermotion,
+  materialUI,
+  shadecn,
+  expressjs,
 };
