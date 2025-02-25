@@ -13,16 +13,13 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  stolid,
+  smit,
   carrent,
   jobit,
   tripguide,
   threejs,
+  Bootstrap,
 } from "../assets";
 
 export const navLinks = [
@@ -46,7 +43,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Frontend Developer",
     icon: mobile,
   },
   {
@@ -54,7 +51,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "UI Developer",
     icon: creator,
   },
 ];
@@ -71,6 +68,10 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "Bootstrap",
+    icon: Bootstrap,
   },
   {
     name: "TypeScript",
@@ -104,69 +105,41 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+ 
+
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Web Development Intern",
+    company_name: "Saylani Mass IT",
+    icon: smit,
+    iconBg: "#FFFFFF",
+    date: "October 2024 - january 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained web applications using React.js and other modern technologies.",
+      "Collaborated with designers, product managers, and developers to build user-friendly interfaces.",
+      "Implemented responsive designs and ensured cross-browser compatibility.",
+      "Participated in code reviews and improved code quality through best practices.",
+      "Gained hands-on experience in frontend and backend development, enhancing problem-solving skills.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Junior Frontend Developer",
+    company_name: "Stolidzone Technologies",
+    icon: stolid,
+    iconBg: "#FFFFFF",
+    date: "Jan 2025 - Feb 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained responsive web applications using React.js and modern frontend technologies.",
+"Designed and built the company’s portfolio website in React, ensuring a smooth user experience and modern UI.",
+"Collaborated with designers, product managers, and backend developers to create high-quality and scalable products.",
+"Ensured cross-browser compatibility and optimized performance for different devices.",
+"Participated in code reviews, provided feedback, and improved code quality through best practices.",
     ],
   },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  
+ 
 ];
 
 const testimonials = [
