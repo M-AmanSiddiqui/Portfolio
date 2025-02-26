@@ -73,6 +73,8 @@ const technologies = [
     name: "HTML 5",
     icon: html,
   },
+  
+  
   {
     name: "Next js",
     icon: nextjs,
