@@ -129,6 +129,53 @@ const technologies = [
  
 
 ];
+
+const education = [
+  {
+    title: "Matriculation",
+    institution: "Board of Secondary Education karachi",
+    icon: smit,
+    iconBg: "#FFFFFF",
+    date: "September 2020 - September 2022",
+    points: [
+      "Developed a strong foundation in Mathematics, Physics, Chemistry, and Biology.",
+      "Conducted practical experiments to understand scientific concepts and problem-solving techniques.",
+      "Gained analytical thinking skills through mathematical problem-solving and scientific reasoning."
+    ]
+  },
+  {
+    title: "Intermediate",
+    institution: "Board of Intermediate Education karachi",
+    icon: stolid,
+    iconBg: "#FFFFFF",
+    date: "Jan 2025 - Feb 2025",
+    points: [
+      "Strengthened problem-solving skills through advanced Mathematics and Physics concepts.",
+      "Gained practical knowledge of Mechanics, Electricity, and Calculus through theoretical and lab experiments.",
+      "Developed analytical thinking and logical reasoning by solving complex mathematical and physics problems."
+    ]
+    
+  },
+  {
+    title: "Junior Frontend Developer",
+    institution: "Stolidzone Technologies",
+    icon: stolid,
+    iconBg: "#FFFFFF",
+    date: "Jan 2025 - Feb 2025",
+    points: [
+      "Developed and maintained responsive web applications using React.js and modern frontend technologies.",
+"Designed and built the company’s portfolio website in React, ensuring a smooth user experience and modern UI.",
+"Collaborated with designers, product managers, and backend developers to create high-quality and scalable products.",
+"Ensured cross-browser compatibility and optimized performance for different devices.",
+"Participated in code reviews, provided feedback, and improved code quality through best practices.",
+    ],
+  },
+  
+ 
+];
+
+
+
 const experiences = [
   {
     title: "Web Development Intern",
@@ -255,4 +302,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, education };
