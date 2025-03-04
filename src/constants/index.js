@@ -138,10 +138,11 @@ const education = [
     iconBg: "#FFFFFF",
     date: "Sep 2020 - Sep 2022",
     points: [
+      "Studied at Matchless Grammar Secondary School.",
       "Developed a strong foundation in Mathematics, Physics, Chemistry, and Biology.",
-      "Conducted practical experiments to understand scientific concepts and problem-solving techniques.",
-      "Gained analytical thinking skills through mathematical problem-solving and scientific reasoning."
-    ]
+      "Conducted practical experiments to understand scientific concepts and problem-solving techniques."
+]
+
   },
   {
     title: "Intermediate",
@@ -150,11 +151,10 @@ const education = [
     iconBg: "#FFFFFF",
     date: "Sep 2022 - Sep 2024",
     points: [
+      "Studied at Government College for Men Karachi.",
       "Strengthened problem-solving skills through advanced Mathematics and Physics concepts.",
-      "Gained practical knowledge of Mechanics, Electricity, and Calculus through theoretical and lab experiments.",
-      "Developed analytical thinking and logical reasoning by solving complex mathematical and physics problems."
+      "Gained practical knowledge of Mechanics, Electricity, and Calculus through theoretical and lab experiments."
     ]
-    
   },
   {
     title: "DAE in Chemical Engineering",
@@ -163,8 +163,8 @@ const education = [
     iconBg: "#FFFFFF",
     date: "Oct 2022 - Oct 2025",
     points: [
+      "Studying at Government College of Technology Karachi",
       "Gained in-depth knowledge of chemical processes, thermodynamics, and material sciences.",
-      "Conducted laboratory experiments to analyze chemical reactions and industrial applications.",
       "Worked on projects involving distillation, heat transfer, and process optimization."
     ]
     
