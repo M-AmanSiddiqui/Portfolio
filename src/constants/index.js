@@ -4,9 +4,11 @@ import {
   creator,
   mobile,
   web,
-  
+  BoardIntermediate,
+  BoardTechnical,
+  BoardSecondary,
   css,
-  git,
+ 
   html,
   javascript,
   mongodb,
@@ -25,14 +27,7 @@ import {
   nextjs,
   
   vercel,
-  netlify,
-  antd,
-  firebase,
-  framermotion,
-  materialUI,
-  shadecn,
-  expressjs,
-} from "../assets";
+ } from "../assets";
 
 export const navLinks = [
   {
@@ -46,6 +41,10 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
 ];
 
@@ -115,15 +114,7 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
- 
-  {
-    name: "Vercel",
-    icon: vercel,
-  },
+
 
  
  
@@ -134,7 +125,7 @@ const education = [
   {
     title: "Matriculation",
     institution: "Board of Secondary Education karachi",
-    icon: smit,
+    icon: BoardSecondary,
     iconBg: "#FFFFFF",
     date: "Sep 2020 - Sep 2022",
     points: [
@@ -147,7 +138,7 @@ const education = [
   {
     title: "Intermediate",
     institution: "Board of Intermediate Education karachi",
-    icon: stolid,
+    icon: BoardIntermediate,
     iconBg: "#FFFFFF",
     date: "Sep 2022 - Sep 2024",
     points: [
@@ -159,7 +150,7 @@ const education = [
   {
     title: "DAE in Chemical Engineering",
     institution: "Board of Technical Education karachi",
-    icon: stolid,
+    icon: BoardTechnical,
     iconBg: "#FFFFFF",
     date: "Oct 2022 - Oct 2025",
     points: [

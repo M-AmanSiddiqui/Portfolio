@@ -6,7 +6,9 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-
+import BoardSecondary from  "./Education/board of secondary karachi.jpg"
+import BoardIntermediate from  "./Education/Board_of_Intermediate_Education,_Karachi_.png"
+import BoardTechnical from  "./Education/board of technical karachi.jpg"
 import css from "./tech/css.png";
 import nextjs from "./tech/next js.png";
 import vercel from "./tech/vercel.png";
@@ -64,7 +66,9 @@ export {
   jobit,
   tripguide,
   nextjs,
-
+BoardIntermediate,
+BoardTechnical,
+BoardSecondary,
   vercel,
   netlify,
   antd,
