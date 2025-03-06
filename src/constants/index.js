@@ -39,14 +39,14 @@ export const navLinks = [
     title: "Work",
   },
   {
-    id: "contact",
-    title: "Contact",
-  },
-  {
     id: "education",
     title: "Education",
   },
-];
+   {
+    id: "contact",
+    title: "Contact",
+  },
+ ];
 
 const services = [
   {
