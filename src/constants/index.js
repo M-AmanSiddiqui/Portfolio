@@ -1,32 +1,38 @@
 import {
-  
   backend,
   creator,
   mobile,
   web,
-  BoardIntermediate,
-  BoardTechnical,
-  BoardSecondary,
-  css,
- 
-  html,
+   css,
+   html,
   javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  Bootstrap,
-  tailwind,
-  typescript,
-  threejs,
-  smit,
+   smit,
   stolid,
   carrent,
   jobit,
   tripguide,
+  Bootstrap,
   nextjs,
-  
+BoardIntermediate,
+BoardTechnical,
+BoardSecondary,
+github,
+  mongodb,
+nodejs,
+reactjs,
+redux,
+git,
+tailwind,
+typescript,
+threejs,
   vercel,
+  netlify,
+  antd,
+  firebase,
+  framermotion,
+  materialUI,
+  shadecn,
+  expressjs,
  } from "../assets";
 
 export const navLinks = [
@@ -37,10 +43,6 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
-  },
-  {
-    id: "education",
-    title: "Education",
   },
    {
     id: "contact",
@@ -68,34 +70,33 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  
-  
-  {
-    name: "Next js",
-    icon: nextjs,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "Bootstrap",
-    icon: Bootstrap,
-  },
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Material UI", icon: materialUI },
+  { name: "Ant Design", icon: antd },
+  { name: "Framer Motion", icon: framermotion },
+  { name: "ShadCN UI", icon: shadecn },
+  { name: "Three.js", icon: threejs },
+  { name: "Node.js", icon: nodejs },
+  { name: "Express.js", icon: expressjs },
+  { name: "MongoDB", icon: mongodb },
+  { name: "Firebase", icon: firebase },
+  { name: "Git", icon: git },
+  { name: "GitHub", icon: github },
+  { name: "Vercel", icon: vercel },
+  { name: "Netlify", icon: netlify },
+  { name: "Bootstrap", icon: Bootstrap }, 
+  { name: "Next.js", icon: nextjs },
  
-
- 
- 
-
 ];
+
+export default technologies;
+
 
 const education = [
   {
