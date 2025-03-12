@@ -10,13 +10,13 @@ import BoardSecondary from  "./Education/board of secondary karachi.jpg"
 import BoardIntermediate from  "./Education/Board_of_Intermediate_Education,_Karachi_.png"
 import BoardTechnical from  "./Education/board of technical karachi.jpg"
 import css from "./tech/css.png";
-import nextjs from "./tech/next js.png";
+import nextjs from "./tech/nextjs.png";
 import vercel from "./tech/vercel.png";
 import netlify from "./tech/netlify.png";
 import antd from "./tech/antd.png";
 import firebase from "./tech/firebase.png";
-import framermotion from "./tech/framer motion.jpg";
-import materialUI from "./tech/material ui.png";
+import framermotion from "./tech/framer_motion.png";
+import materialUI from "./tech/material_ui.png";
 import shadecn from "./tech/shadecn.jpg";
 import expressjs from "./tech/express js.png";
 
