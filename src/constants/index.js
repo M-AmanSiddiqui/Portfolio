@@ -73,25 +73,29 @@ const technologies = [
   { name: "HTML 5", icon: html },
   { name: "CSS 3", icon: css },
   { name: "JavaScript", icon: javascript },
-  { name: "TypeScript", icon: typescript },
-  { name: "React JS", icon: reactjs },
+ { name: "React JS", icon: reactjs },
   { name: "Redux", icon: redux },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "Material UI", icon: materialUI },
-  { name: "Ant Design", icon: antd },
-  { name: "Framer Motion", icon: framermotion },
-  { name: "ShadCN UI", icon: shadecn },
-  { name: "Three.js", icon: threejs },
+  { name: "Next.js", icon: nextjs },
   { name: "Node.js", icon: nodejs },
   { name: "Express.js", icon: expressjs },
   { name: "MongoDB", icon: mongodb },
   { name: "Firebase", icon: firebase },
+  { name: "Bootstrap", icon: Bootstrap }, 
+ 
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Material UI", icon: materialUI },
+  { name: "Ant Design", icon: antd },
+  { name: "ShadCN UI", icon: shadecn },
+  { name: "Framer Motion", icon: framermotion },
+ 
+  { name: "Three.js", icon: threejs },
+
   { name: "Git", icon: git },
   { name: "GitHub", icon: github },
   { name: "Vercel", icon: vercel },
   { name: "Netlify", icon: netlify },
-  { name: "Bootstrap", icon: Bootstrap }, 
-  { name: "Next.js", icon: nextjs },
+
+ 
  
 ];
 
