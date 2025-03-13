@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { certificates } from "../constants";
+import { styles } from "../styles";
 
+import { textVariant } from "../utils/motion";
 function Certificates() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
   const [showFullImage, setShowFullImage] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#0a0a1a] text-white p-10 flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-6 text-[#915EFF]">My Achievements</h1>
-
+       <motion.div variants={textVariant()}>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+       Achievements
+        </h2>
+        <p className={`${styles.sectionSubText} text-center`}>
+        Certifications showcasing my expertise
+        </p>
+      </motion.div>
       {/* Grid View */}
       {!selectedCertificate && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-10">
           {certificates.map((cert, index) => (
             <motion.div
               key={index}
