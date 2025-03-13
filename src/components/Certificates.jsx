@@ -4,12 +4,13 @@ import { certificates } from "../constants";
 
 function Certificates() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [showFullImage, setShowFullImage] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#0a0a1a] text-white p-10 flex flex-col items-center">
       <h1 className="text-4xl font-bold mb-6 text-[#915EFF]">My Achievements</h1>
 
-      {/* Grid Tab Dikhe Jab Modal Na Ho */}
+      {/* Grid View */}
       {!selectedCertificate && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificates.map((cert, index) => (
@@ -23,7 +24,11 @@ function Certificates() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[#915EFF] opacity-20 
                               group-hover:opacity-50 transition-opacity"></div>
-              <img src={cert.image} alt={cert.title} className="w-full h-40 object-cover rounded-md mb-4" />
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="w-full h-56 object-cover rounded-md mb-4"
+              />
               <h2 className="text-xl font-semibold text-[#915EFF] relative z-10">{cert.title}</h2>
               <p className="text-sm text-white relative z-10">{cert.provider} - {cert.date}</p>
               <div className="absolute inset-0 rounded-2xl border-2 border-[#915EFF] opacity-10 
@@ -33,29 +38,68 @@ function Certificates() {
         </div>
       )}
 
-      {/* Modal Jab Certificate Select Ho */}
+      {/* Modal */}
       {selectedCertificate && (
         <motion.div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 mt-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          onClick={() => setSelectedCertificate(null)} // Modal click pe close ho jaye
+          onClick={() => setSelectedCertificate(null)}
         >
-          <div className="bg-[#11132d] p-8 rounded-lg shadow-lg text-center max-w-md" onClick={(e) => e.stopPropagation()}>
-            <img src={selectedCertificate.image} alt={selectedCertificate.title} className="w-full h-48 object-cover rounded-md mb-4" />
+          <div className="bg-[#11132d] p-8 rounded-lg shadow-lg text-center max-w-md relative" onClick={(e) => e.stopPropagation()}>
+            
+            {/* 🔍 Click to View Full Image */}
+            <img
+              src={selectedCertificate.image}
+              alt={selectedCertificate.title}
+              className="w-full h-56 object-cover rounded-md mb-4 cursor-pointer"
+              onClick={() => setShowFullImage(true)}
+            />
+            
             <h2 className="text-2xl font-semibold text-[#915EFF]">{selectedCertificate.title}</h2>
             <p className="text-white">{selectedCertificate.provider} - {selectedCertificate.date}</p>
             <p className="text-gray-300 mt-2">{selectedCertificate.description}</p>
 
-            {/* Close Button */}
+           {/* ✅ View Credential Button */}
+{/* ✅ Button sirf tabhi dikhai de jab link exist kare aur empty na ho */}
+{selectedCertificate.link && selectedCertificate.link.trim() !== "" ? (
+  <a
+    href={selectedCertificate.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 inline-block bg-green-500 px-4 py-2 rounded-lg text-white hover:bg-green-600"
+  >
+    View Credential
+  </a>
+) : (
+  <p className="mt-4 text-gray-400">No Credential Available</p> // 🔥 Jab link na ho toh ye dikhaye
+)}
+      {/* ✅ Close Button (Now Below Credential Button) */}
             <button
-              className="mt-4 bg-[#915EFF] px-4 py-2 rounded-lg text-white hover:bg-[#7a4ee0]"
+              className="mt-4 bg-[#915EFF] px-4 py-2 rounded-lg text-white hover:bg-[#7a4ee0] block mx-auto"
               onClick={() => setSelectedCertificate(null)}
             >
               Close
             </button>
           </div>
+        </motion.div>
+      )}
+
+      {/* ✅ Full Image Modal */}
+      {showFullImage && selectedCertificate && (
+        <motion.div
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setShowFullImage(false)}
+        >
+          <img
+            src={selectedCertificate.image}
+            alt={selectedCertificate.title}
+            className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+          />
         </motion.div>
       )}
     </div>

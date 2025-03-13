@@ -33,6 +33,7 @@ threejs,
   materialUI,
   shadecn,
   expressjs,
+  Simplilearn
  } from "../assets";
 
 export const navLinks = [
@@ -186,7 +187,7 @@ const experiences = [
     provider: "Udemy",
     date: "Jan 2024",
     description: "A comprehensive full-stack developer course covering React, Node.js, and databases.",
-    image: "/images/certificates/fullstack.png", // 🔥 Certificate Image
+    image: Simplilearn, // 🔥 Certificate Image
     link: "https://example.com/certificate/fullstack"
   },
   {
@@ -194,7 +195,7 @@ const experiences = [
     provider: "Coursera",
     date: "Dec 2023",
     description: "An advanced course on modern frontend development with React and Tailwind.",
-    image: "/images/certificates/frontend.png", // 🔥 Certificate Image
+    image: "", // 🔥 Certificate Image
     link: ""
   }
 ];
