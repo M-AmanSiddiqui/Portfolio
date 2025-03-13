@@ -1,84 +1,63 @@
-import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { certificates } from "../constants";
-
-function Certificates() {
-  const [selectedCertificate, setSelectedCertificate] = useState(null);
-
+import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
+import { Link } from "react-router-dom";
+const Hero = () => {
   return (
-    <div className="min-h-screen bg-[#0a0a1a] text-white p-10 flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-6 text-[#915EFF]">My Achievements</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {certificates.map((cert, index) => (
-          <motion.div
-            key={index}
-            className="relative bg-[#11132d] p-4 rounded-2xl shadow-lg border border-[#915EFF]/50 cursor-pointer 
-                      transition-transform transform hover:scale-105 group overflow-hidden"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setSelectedCertificate(cert)}
-          >
-            {/* Certificate Image */}
-            <img 
-              src={cert.image} 
-              alt={cert.title} 
-              className="w-full h-48 object-cover rounded-lg border border-[#915EFF]/40 shadow-lg"
-            />
+    <section className={`relative w-full h-screen mx-auto`}>
+      <div
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
+        <div className='flex flex-col justify-center items-center mt-5'>
+          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
+          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+        </div>
 
-            {/* Title & Provider */}
-            <h2 className="text-lg font-semibold text-[#915EFF] mt-3">{cert.title}</h2>
-            <p className="text-sm text-gray-300">{cert.provider} - {cert.date}</p>
-          </motion.div>
-        ))}
+        <div>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            Hi, I'm <span className='text-[#915EFF]'>Aman</span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          I am a web developer who builds <br className='sm:block hidden' />
+          user interfaces and web applications
+          </p>
+          <motion.a
+  href="../assets/AS_logo.png"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.9 }}
+  className="px-3  py-2 bg-transparent text-white border-2 border-white rounded-lg hover:bg-[#915EFF] transition duration-300 text-center"
+>
+  My Resume
+</motion.a>
+
+
+
+        </div>
       </div>
 
-      {/* Certificate Popup */}
-      {selectedCertificate && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-md">
-          <motion.div
-            className="bg-[#11132d] p-6 rounded-lg shadow-2xl text-center max-w-lg relative"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-          >
-            <div className="absolute inset-0 rounded-lg border-2 border-[#915EFF] opacity-20"></div>
+      <ComputersCanvas />
 
-            {/* Certificate Full Image */}
-            <img 
-              src={selectedCertificate.image} 
-              alt={selectedCertificate.title} 
-              className="w-full h-64 object-contain rounded-lg border border-[#915EFF]/40 shadow-lg"
+      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+        <a href='#about'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
-
-            <h2 className="text-2xl font-bold text-[#915EFF] mt-4">{selectedCertificate.title}</h2>
-            <p className="text-sm text-white mb-4">{selectedCertificate.provider} - {selectedCertificate.date}</p>
-            <p className="text-gray-300">{selectedCertificate.description}</p>
-
-            {/* View Credential Button */}
-            {selectedCertificate.link ? (
-              <a 
-                href={selectedCertificate.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="block mt-4 px-4 py-2 bg-[#915EFF] text-white rounded-lg hover:bg-white hover:text-[#915EFF] transition"
-              >
-                View Credential
-              </a>
-            ) : (
-              <p className="mt-4 text-gray-400">Credential not available</p>
-            )}
-
-            {/* Close Button */}
-            <button 
-              className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-500 transition" 
-              onClick={() => setSelectedCertificate(null)}
-            >
-              Close
-            </button>
-          </motion.div>
-        </div>
-      )}
-    </div>
+          </div>
+        </a>
+      </div>
+    </section>
   );
-}
+};
 
-export default Certificates;
+export default Hero;
