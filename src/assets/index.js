@@ -38,8 +38,7 @@ import stolid from "./company/stolid.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
-import Simplilearn from "./Certificate/Front_end_Development.png"; // Rename file accordingly
+import Simplilearn from "./Certificate/Front End Development.jpg"
 
 export {
   logo,
