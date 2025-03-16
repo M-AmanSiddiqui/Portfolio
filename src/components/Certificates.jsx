@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { certificates } from "../constants";
 import { styles } from "../styles";
+import { RiShareBoxFill } from "react-icons/ri";
 
 import { textVariant } from "../utils/motion";
 function Certificates() {
@@ -30,15 +31,15 @@ function Certificates() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCertificate(cert)}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[#915EFF] opacity-20 
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent  opacity-20 
                               group-hover:opacity-50 transition-opacity"></div>
               <img
                 src={cert.image}
                 alt={cert.title}
                 className="w-full h-56 object-cover rounded-md mb-4"
               />
-              <h2 className="text-xl font-semibold text-[#915EFF] relative z-10">{cert.title}</h2>
-              <p className="text-sm text-white relative z-10">{cert.provider} - {cert.date}</p>
+              <h2 className="text-xl font-semibold text-white relative z-10">{cert.title}</h2>
+              <p className="text-sm  text-[#915EFF] relative z-10">{cert.provider} - {cert.date}</p>
               <div className="absolute inset-0 rounded-2xl border-2 border-[#915EFF] opacity-10 
                               group-hover:opacity-30 transition-opacity"></div>
             </motion.div>
@@ -73,13 +74,15 @@ function Certificates() {
 {/* ✅ Button sirf tabhi dikhai de jab link exist kare aur empty na ho */}
 {selectedCertificate.link && selectedCertificate.link.trim() !== "" ? (
   <a
-    href={selectedCertificate.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-4 inline-block bg-green-500 px-4 py-2 rounded-lg text-white hover:bg-green-600"
-  >
-    View Credential
-  </a>
+  href={selectedCertificate.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 inline-flex items-center gap-2 border-2 border-white px-4 py-2 rounded-lg text-white"
+>
+  View Credential <RiShareBoxFill />
+</a>
+
+
 ) : (
   <p className="mt-4 text-gray-400">No Credential Available</p> // 🔥 Jab link na ho toh ye dikhaye
 )}

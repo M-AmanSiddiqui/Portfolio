@@ -1,30 +1,25 @@
 import {
-  backend,
-  creator,
-  mobile,
-  web,
-   css,
-   html,
+  // General
+  github,
+  
+  // Education
+  BoardIntermediate,
+  BoardTechnical,
+  BoardSecondary,
+  
+  // Tech Stack
+  css,
+  html,
   javascript,
-   smit,
-  stolid,
-  carrent,
-  jobit,
-  tripguide,
+  mongodb,
+  nodejs,
+  reactjs,
+  redux,
+  git,
+  tailwind,
+  threejs,
   Bootstrap,
   nextjs,
-BoardIntermediate,
-BoardTechnical,
-BoardSecondary,
-github,
-  mongodb,
-nodejs,
-reactjs,
-redux,
-git,
-tailwind,
-typescript,
-threejs,
   vercel,
   netlify,
   antd,
@@ -33,8 +28,26 @@ threejs,
   materialUI,
   shadecn,
   expressjs,
-  Simplilearn
- } from "../assets";
+  
+  // Companies
+  smit,
+  stolid,
+  
+  // Projects
+  carrent,
+  jobit,
+  tripguide,
+  
+  // Certificates
+  Simplilearn,
+  
+  // Misc
+  backend,
+  creator,
+  mobile,
+  web,
+} from "../assets";
+
 
 export const navLinks = [
   {
@@ -182,22 +195,46 @@ const experiences = [
 ];
 
   const certificates = [
-  {
-    title: "Full-Stack Developer Certification",
-    provider: "Udemy",
-    date: "Jan 2024",
-    description: "A comprehensive full-stack developer course covering React, Node.js, and databases.",
-    image: Simplilearn, // 🔥 Certificate Image
-    link: "https://example.com/certificate/fullstack"
-  },
-  {
-    title: "Frontend Web Development",
-    provider: "Coursera",
-    date: "Dec 2023",
-    description: "An advanced course on modern frontend development with React and Tailwind.",
-    image: "", // 🔥 Certificate Image
-    link: ""
-  }
+    {
+      title: "Front-End Development",
+      provider: "Simplilearn",
+      date: "February 28, 2025",
+      description: "Overview of front-end technologies including HTML, CSS, and JavaScript.",
+      image: "path/to/frontend-certificate-image.png", // Replace if available
+      link: "path/to/Front End Development.pdf" // Replace with actual link
+    },
+    {
+      title: "JavaScript Essentials 1",
+      provider: "Cisco Networking Academy",
+      date: "March 4, 2025",
+      description: "Fundamentals of JavaScript programming, covering syntax, functions, and basic web interactions.",
+      image: "Badge-javascript-essentials-1.png", // Certificate Badge
+      link: "path/to/certificate_JavascriptEssentials1.pdf" // Replace with actual link
+    },
+    {
+      title: "JavaScript Essentials 2",
+      provider: "Cisco Networking Academy",
+      date: "March 6, 2025",
+      description: "Advanced JavaScript concepts including asynchronous programming, ES6+ features, and object-oriented principles.",
+      image: "Badge-javascript-essentials-2.png", // Certificate Badge
+      link: "path/to/_certificate_waqarahmedsb540-gmail-com_fc5a3346-dae7-44bd-b9ae-f7ed04261bd7.pdf" // Replace with actual link
+    },
+    {
+      title: "JavaScript (Basic)",
+      provider: "HackerRank",
+      date: "March 5, 2025",
+      description: "Basic JavaScript coding skills, focusing on core concepts and syntax.",
+      image: "Badge-javascript-basic.png", // Basic Badge
+      link: "path/to/certificate_JavascriptBasic.pdf" // Replace with actual link
+    },
+    {
+      title: "JavaScript (Intermediate)",
+      provider: "HackerRank",
+      date: "March 15, 2025",
+      description: "Intermediate JavaScript skills, covering advanced functions, closures, and object-oriented concepts.",
+      image: "Badge-javascript-intermediate.png", // Intermediate Badge
+      link: "path/to/certificate_JavascriptIntermediate.pdf" // Replace with actual link
+    }
 ];
 
 
