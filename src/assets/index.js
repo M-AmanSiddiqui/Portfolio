@@ -46,7 +46,14 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 // Certificates
-import Simplilearn from "./Certificate/Front End Development.jpg";
+import Simplilearn_FrontEnd from "./Certificate/Front End Development.jpg";
+import JavaScript_Essential_1 from "./Certificate/Cisco JavaScript Essential 1.JPG";
+import JavaScript_Essential_2 from "./Certificate/Cisco JavaScript Essential 2.JPG";
+import HackerRank_JS_Basic from "./Certificate/HackerRank JavaScript.JPG";
+import HackerRank_JS_Intermediate from "./Certificate/HackerRank JavaScript (2).JPG";
+import Infotech_DIT from "./Certificate/DIT.jpg";
+
+
 
 export {
   // General
@@ -98,5 +105,10 @@ export {
   tripguide,
   
   // Certificates
-  Simplilearn,
+  Simplilearn_FrontEnd,
+  JavaScript_Essential_1,
+  JavaScript_Essential_2,
+  HackerRank_JS_Basic,
+  HackerRank_JS_Intermediate,
+  Infotech_DIT,
 };

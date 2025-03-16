@@ -39,7 +39,12 @@ import {
   tripguide,
   
   // Certificates
-  Simplilearn,
+  Simplilearn_FrontEnd,
+  JavaScript_Essential_1,
+  JavaScript_Essential_2,
+  HackerRank_JS_Basic,
+  HackerRank_JS_Intermediate,
+  Infotech_DIT,
   
   // Misc
   backend,
@@ -197,7 +202,7 @@ const experiences = [
   const certificates = [
     {
       title: "Front-End Development",
-      provider: "Simplilearn",
+      provider: Simplilearn_FrontEnd,
       date: "February 28, 2025",
       description: "Overview of front-end technologies including HTML, CSS, and JavaScript.",
       image: "path/to/frontend-certificate-image.png", // Replace if available
@@ -205,7 +210,7 @@ const experiences = [
     },
     {
       title: "JavaScript Essentials 1",
-      provider: "Cisco Networking Academy",
+      provider: JavaScript_Essential_1,
       date: "March 4, 2025",
       description: "Fundamentals of JavaScript programming, covering syntax, functions, and basic web interactions.",
       image: "Badge-javascript-essentials-1.png", // Certificate Badge
@@ -213,7 +218,7 @@ const experiences = [
     },
     {
       title: "JavaScript Essentials 2",
-      provider: "Cisco Networking Academy",
+      provider: JavaScript_Essential_2,
       date: "March 6, 2025",
       description: "Advanced JavaScript concepts including asynchronous programming, ES6+ features, and object-oriented principles.",
       image: "Badge-javascript-essentials-2.png", // Certificate Badge
@@ -221,7 +226,7 @@ const experiences = [
     },
     {
       title: "JavaScript (Basic)",
-      provider: "HackerRank",
+      provider: HackerRank_JS_Basic,
       date: "March 5, 2025",
       description: "Basic JavaScript coding skills, focusing on core concepts and syntax.",
       image: "Badge-javascript-basic.png", // Basic Badge
@@ -229,12 +234,20 @@ const experiences = [
     },
     {
       title: "JavaScript (Intermediate)",
-      provider: "HackerRank",
+      provider: HackerRank_JS_Intermediate,
       date: "March 15, 2025",
       description: "Intermediate JavaScript skills, covering advanced functions, closures, and object-oriented concepts.",
       image: "Badge-javascript-intermediate.png", // Intermediate Badge
       link: "path/to/certificate_JavascriptIntermediate.pdf" // Replace with actual link
-    }
+    },
+    {
+      title: "D.I.T",
+      provider: Infotech_DIT,
+      date: "Aug 31, 2023",
+      description: "Diploma in Information Technology covering core IT skills.",
+      image: "DIT.jpg",
+      link: "path/to/DIT_certificate.pdf", 
+    },
 ];
 
 
