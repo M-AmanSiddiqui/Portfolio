@@ -230,7 +230,7 @@ const experiences = [
       date: "March 5, 2025",
       description: "Basic JavaScript coding skills, focusing on core concepts and syntax.",
       image: "Badge-javascript-basic.png", // Basic Badge
-      link: "path/to/certificate_JavascriptBasic.pdf" // Replace with actual link
+      link: "" // Replace with actual link
     },
     {
       title: "JavaScript (Intermediate)",
