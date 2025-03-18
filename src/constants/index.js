@@ -238,7 +238,7 @@ const experiences = [
       date: "March 15, 2025",
       description: "Intermediate JavaScript skills, covering advanced functions, closures, and object-oriented concepts.",
       image: "Badge-javascript-intermediate.png", // Intermediate Badge
-      link: "path/to/certificate_JavascriptIntermediate.pdf" // Replace with actual link
+      link: "" // Replace with actual link
     },
     {
       title: "D.I.T",
@@ -246,7 +246,7 @@ const experiences = [
       date: "Aug 31, 2023",
       description: "Diploma in Information Technology covering core IT skills.",
       image: "DIT.jpg",
-      link: "path/to/DIT_certificate.pdf", 
+      link: "", 
     },
 ];
 
