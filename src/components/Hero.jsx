@@ -21,16 +21,7 @@ const Hero = () => {
           I am a web developer who builds <br className='sm:block hidden' />
           user interfaces and web applications
           </p>
-          <motion.a
-  href="../assets/AS_logo.png"
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.9 }}
-  className="px-3  py-2 bg-transparent text-white border-2 border-white rounded-lg hover:bg-[#915EFF] transition duration-300 text-center"
->
-  My Resume
-</motion.a>
+    
 
 
 

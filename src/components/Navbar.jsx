@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -61,6 +61,11 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+         
+
+
+
+
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
