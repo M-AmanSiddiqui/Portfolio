@@ -39,7 +39,7 @@ function Certificates() {
                 className="w-full h-56 object-cover rounded-md mb-4"
               />
               <h2 className="text-xl font-semibold text-white relative z-10">{cert.title}</h2>
-              <p className="text-sm  text-[#915EFF] relative z-10">{cert.provider} - {cert.date}</p>
+              <p className="text-sm  text-[#915EFF] relative z-10 mt-2">{cert.provider} - {cert.date}</p>
               <div className="absolute inset-0 rounded-2xl border-2 border-[#915EFF] opacity-10 
                               group-hover:opacity-30 transition-opacity"></div>
             </motion.div>

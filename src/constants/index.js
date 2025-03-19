@@ -202,53 +202,59 @@ const experiences = [
   const certificates = [
     {
       title: "Front-End Development",
-      provider: Simplilearn_FrontEnd,
+      provider: "Simplilearn",
       date: "February 28, 2025",
       description: "Overview of front-end technologies including HTML, CSS, and JavaScript.",
-      image: "path/to/frontend-certificate-image.png", // Replace if available
+      image: Simplilearn_FrontEnd, // Replace if available
       link: "path/to/Front End Development.pdf" // Replace with actual link
     },
     {
       title: "JavaScript Essentials 1",
-      provider: JavaScript_Essential_1,
+      provider: "Cisco Networking Academy",
       date: "March 4, 2025",
       description: "Fundamentals of JavaScript programming, covering syntax, functions, and basic web interactions.",
-      image: "Badge-javascript-essentials-1.png", // Certificate Badge
+      image: JavaScript_Essential_1, // Certificate Badge
       link: "path/to/certificate_JavascriptEssentials1.pdf" // Replace with actual link
     },
     {
       title: "JavaScript Essentials 2",
-      provider: JavaScript_Essential_2,
+      provider: "Cisco Networking Academy",
       date: "March 6, 2025",
       description: "Advanced JavaScript concepts including asynchronous programming, ES6+ features, and object-oriented principles.",
-      image: "Badge-javascript-essentials-2.png", // Certificate Badge
+      image: JavaScript_Essential_2, // Certificate Badge
       link: "path/to/_certificate_waqarahmedsb540-gmail-com_fc5a3346-dae7-44bd-b9ae-f7ed04261bd7.pdf" // Replace with actual link
     },
     {
       title: "JavaScript (Basic)",
-      provider: HackerRank_JS_Basic,
+      provider: "HackerRank",
       date: "March 5, 2025",
       description: "Basic JavaScript coding skills, focusing on core concepts and syntax.",
-      image: "Badge-javascript-basic.png", // Basic Badge
+      image: HackerRank_JS_Basic, // Basic Badge
       link: "" // Replace with actual link
     },
     {
       title: "JavaScript (Intermediate)",
-      provider: HackerRank_JS_Intermediate,
+      provider: "HackerRank",
       date: "March 15, 2025",
       description: "Intermediate JavaScript skills, covering advanced functions, closures, and object-oriented concepts.",
-      image: "Badge-javascript-intermediate.png", // Intermediate Badge
+      image: HackerRank_JS_Intermediate, // Intermediate Badge
       link: "" // Replace with actual link
     },
     {
       title: "D.I.T",
-      provider: Infotech_DIT,
+      provider: "Infotech",
       date: "Aug 31, 2023",
       description: "Diploma in Information Technology covering core IT skills.",
-      image: "DIT.jpg",
+      image: Infotech_DIT,
       link: "", 
     },
 ];
+
+
+
+
+
+
 
 
 const projects = [
