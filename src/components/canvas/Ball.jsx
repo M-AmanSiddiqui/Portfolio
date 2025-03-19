@@ -140,7 +140,7 @@
 
 // export default BoxCanvas;
 import React from "react";
-import { technologies } from "../../constants/index";
+import { skills } from "../../constants/index";
 const SimpleBox = ({ icon, name }) => {
   return (
     <div

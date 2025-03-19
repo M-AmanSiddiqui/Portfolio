@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { certificates } from "../constants";
+import { achievements } from "../constants";
 import { styles } from "../styles";
 import { RiShareBoxFill } from "react-icons/ri";
-
+import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-function Certificates() {
+function Achievements() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
   const [showFullImage, setShowFullImage] = useState(false);
 
@@ -22,7 +22,7 @@ function Certificates() {
       {/* Grid View */}
       {!selectedCertificate && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-10">
-          {certificates.map((cert, index) => (
+          {achievements.map((cert, index) => (
             <motion.div
               key={index}
               className="relative bg-[#11132d] p-6 rounded-2xl shadow-xl border border-[#915EFF]/50 cursor-pointer 
@@ -117,4 +117,5 @@ function Certificates() {
   );
 }
 
-export default Certificates;
+
+export default SectionWrapper(Achievements, "achievements");

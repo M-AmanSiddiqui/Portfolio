@@ -72,9 +72,17 @@ export const navLinks = [
     id: "skills",
     title: "Skills",
   },
+  {
+    id: "projects",
+    title: "Projects",
+  },
    {
     id: "achievements",
     title: "Achievements",
+  },
+  {
+    id: "contact",
+    title: "Contact",
   },
 
  ];
@@ -98,7 +106,7 @@ const services = [
   },
 ];
 
-const technologies = [
+const skills = [
   { name: "HTML 5", icon: html },
   { name: "CSS 3", icon: css },
   { name: "JavaScript", icon: javascript },
@@ -128,7 +136,7 @@ const technologies = [
  
 ];
 
-export default technologies;
+
 
 
 const education = [
@@ -209,7 +217,7 @@ const experiences = [
  
 ];
 
-  const certificates = [
+  const achievements = [
     {
       title: "Front-End Development",
       provider: "Simplilearn",
@@ -333,4 +341,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, certificates, projects, education };
+export { services, skills, experiences, achievements, projects, education };
