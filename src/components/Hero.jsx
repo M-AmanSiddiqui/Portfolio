@@ -21,8 +21,7 @@ const Hero = () => {
           I am a web developer who builds <br className='sm:block hidden' />
           user interfaces and web applications
           </p>
-    
-
+          <button className="bg-[#915EFF] p-2 rounded-xl text-white font-semibold hover:bg-[#7a4ee0] transition">My Resume</button>
 
 
         </div>

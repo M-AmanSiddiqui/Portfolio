@@ -224,7 +224,7 @@ const experiences = [
       date: "February 28, 2025",
       description: "Overview of front-end technologies including HTML, CSS, and JavaScript.",
       image: Simplilearn_FrontEnd, // Replace if available
-      link: "path/to/Front End Development.pdf" // Replace with actual link
+   
     },
     {
       title: "JavaScript Essentials 1",
@@ -232,7 +232,7 @@ const experiences = [
       date: "March 4, 2025",
       description: "Fundamentals of JavaScript programming, covering syntax, functions, and basic web interactions.",
       image: JavaScript_Essential_1, // Certificate Badge
-      link: "path/to/certificate_JavascriptEssentials1.pdf" // Replace with actual link
+      link: "https://www.credly.com/badges/75896ac0-5995-492a-aa29-a7620be38928" // Replace with actual link
     },
     {
       title: "JavaScript Essentials 2",
