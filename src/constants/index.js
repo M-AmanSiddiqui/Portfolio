@@ -240,7 +240,7 @@ const experiences = [
       date: "March 6, 2025",
       description: "Advanced JavaScript concepts including asynchronous programming, ES6+ features, and object-oriented principles.",
       image: JavaScript_Essential_2, // Certificate Badge
-      link: "path/to/_certificate_waqarahmedsb540-gmail-com_fc5a3346-dae7-44bd-b9ae-f7ed04261bd7.pdf" // Replace with actual link
+      link: "https://www.credly.com/badges/7d4d2029-1658-49f1-9a58-0a30be1dbeec" // Replace with actual link
     },
     {
       title: "JavaScript (Basic)",
@@ -248,7 +248,7 @@ const experiences = [
       date: "March 5, 2025",
       description: "Basic JavaScript coding skills, focusing on core concepts and syntax.",
       image: HackerRank_JS_Basic, // Basic Badge
-      link: "" // Replace with actual link
+      link: "https://www.hackerrank.com/certificates/iframe/e867083083e1" // Replace with actual link
     },
     {
       title: "JavaScript (Intermediate)",
@@ -256,7 +256,7 @@ const experiences = [
       date: "March 15, 2025",
       description: "Intermediate JavaScript skills, covering advanced functions, closures, and object-oriented concepts.",
       image: HackerRank_JS_Intermediate, // Intermediate Badge
-      link: "" // Replace with actual link
+      link: "https://www.hackerrank.com/certificates/e6f7612b19f6" // Replace with actual link
     },
     {
       title: "D.I.T",
