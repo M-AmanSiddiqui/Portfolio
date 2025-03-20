@@ -26,20 +26,20 @@ const Hero = () => {
 
           {/* Social Links + Resume Button */}
           <div className="flex items-center space-x-3 mt-4">
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-purple-800 transition-all"
-            >
-              <FaGithub size={24} />
-            </a>
+          <button
+  className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-purple-800 z-50"
+  onClick={() => window.open("https://github.com/M-AmanSiddiqui", "_blank", )}
+>
+  <FaGithub size={24} />
+</button>
+
+
 
             <a
               href="https://www.linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-purple-800 transition-all"
+              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-purple-800 transition-all z-50"
             >
               <FaLinkedin size={24} />
             </a>

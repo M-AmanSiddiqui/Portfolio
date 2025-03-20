@@ -89,9 +89,13 @@ function Achievements() {
             )}
 
             {/* ✅ Close Button */}
-            <button className="mt-4 bg-[#915EFF] px-4 py-2 rounded-lg text-white hover:bg-[#7a4ee0] block mx-auto" onClick={() => setSelectedCertificate(null)}>
-              Close
-            </button>
+            <button
+  className="mt-4 z-50 bg-[#915EFF] px-4 py-2 rounded-lg text-white hover:bg-[#7a4ee0] block mx-auto pointer-events-auto"
+  onClick={() => setSelectedCertificate(null)}
+>
+  Close
+</button>
+
           </div>
         </motion.div>
       )}
