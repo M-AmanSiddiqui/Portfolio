@@ -27,7 +27,7 @@ const Hero = () => {
           {/* Social Links + Resume Button */}
           <div className="flex items-center space-x-3 mt-4">
           <button
-  className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-purple-800 z-50"
+  className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-[#7a4ee0] z-50"
   onClick={() => window.open("https://github.com/M-AmanSiddiqui", "_blank", )}
 >
   <FaGithub size={24} />
@@ -35,16 +35,16 @@ const Hero = () => {
 
 
 
-            <a
-              href="https://www.linkedin.com/in/yourusername"
+            <button
+             onClick={() => window.open("https://www.linkedin.com/in/aman-siddiqui-a1a201328/", "_blank", )}
               target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-purple-800 transition-all z-50"
+             
+              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-[#7a4ee0] transition-all z-50"
             >
               <FaLinkedin size={24} />
-            </a>
+            </button>
 
-            <button className="bg-[#915EFF] px-4 py-2 rounded-xl text-white font-semibold hover:bg-[#7a4ee0] transition">
+            <button className="bg-[#915EFF] z-50 px-4 py-2 rounded-xl text-white font-semibold hover:bg-[#7a4ee0] transition">
               My Resume
             </button>
           </div>
