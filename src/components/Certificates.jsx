@@ -143,7 +143,7 @@ function Achievements() {
     <div className="min-h-screen bg-[#0a0a1a] text-white px-4 sm:px-6 md:px-10 py-10 flex flex-col items-center">
       <motion.div variants={textVariant()} className="w-full max-w-6xl">
         <h2 className={`${styles.sectionHeadText} text-center text-2xl sm:text-3xl md:text-4xl`}>Achievements</h2>
-        <p className={`${styles.sectionSubText} text-center text-sm sm:text-base`}>Certifications showcasing my expertise</p>
+        <p className={`${styles.sectionSubText} text-center text-sm sm:text-base mt-4`}>Certifications showcasing my expertise</p>
       </motion.div>
 
       {/* Grid View */}
