@@ -53,6 +53,8 @@ import HackerRank_JS_Basic from "./Certificate/HackerRank JavaScript.JPG";
 import HackerRank_JS_Intermediate from "./Certificate/HackerRank JavaScript (2).JPG";
 import Infotech_DIT from "./Certificate/DIT.jpg";
 
+// CV
+import My_Cv from "./My Cv/Muhammad Aman CV-2.pdf" 
 
 
 export {
@@ -66,7 +68,10 @@ export {
    creator,
    mobile,
    web,
-  
+   
+  //  CV
+  My_Cv,
+
   // Education
   BoardIntermediate,
   BoardTechnical,
