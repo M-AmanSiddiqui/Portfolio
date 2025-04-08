@@ -1,10 +1,31 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+
+  const handleResumeClick = () => {
+    setIsModalOpen(true); // Open modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Close modal
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/path_to_your_cv.pdf'; // Replace with your actual CV path
+    link.download = 'CV.pdf'; // You can change the filename here
+    link.click();
+  };
+
+  const handleView = () => {
+    window.open('/path_to_your_cv.pdf', '_blank'); // Open CV in a new tab
+  };
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -26,25 +47,24 @@ const Hero = () => {
 
           {/* Social Links + Resume Button */}
           <div className="flex items-center space-x-3 mt-4">
-          <button
-  className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-[#7a4ee0] "
-  onClick={() => window.open("https://github.com/M-AmanSiddiqui", "_blank", )}
->
-  <FaGithub size={24} />
-</button>
-
-
+            <button
+              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-[#7a4ee0] z-40"
+              onClick={() => window.open("https://github.com/M-AmanSiddiqui", "_blank")}
+            >
+              <FaGithub size={24} />
+            </button>
 
             <button
-             onClick={() => window.open("https://www.linkedin.com/in/aman-siddiqui-a1a201328/", "_blank", )}
-              target="_blank"
-             
-              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-[#7a4ee0] transition-all "
+              onClick={() => window.open("https://www.linkedin.com/in/aman-siddiqui-a1a201328/", "_blank")}
+              className="p-2 bg-[#915EFF] text-white rounded-lg hover:bg-[#7a4ee0] transition-all z-40"
             >
               <FaLinkedin size={24} />
             </button>
 
-            <button className="bg-[#915EFF]  px-4 py-2 rounded-xl text-white font-semibold hover:bg-[#7a4ee0] transition">
+            <button
+              onClick={handleResumeClick} // Open Modal
+              className="bg-[#915EFF] z-40 px-4 py-2 rounded-xl text-white font-semibold hover:bg-[#7a4ee0] transition"
+            >
               My Resume
             </button>
           </div>
@@ -52,6 +72,38 @@ const Hero = () => {
       </div>
 
       <ComputersCanvas />
+
+      {/* Modal */}
+   {/* Modal */}
+{isModalOpen && (
+  <div className="fixed inset-0 bg-[#11132d] bg-opacity-50 flex justify-center items-center z-50">
+    <div className="p-6 rounded-lg w-3/4 sm:w-1/3 lg:w-1/4 bg-black bg-opacity-80">
+      <h2 className="text-center text-2xl font-semibold text-[#915EFF]">My Resume</h2>
+      <div className="mt-4 flex justify-center space-x-4">
+        <button
+          onClick={handleDownload}
+          className="bg-[#915EFF] text-white px-4 py-2 rounded-lg hover:bg-[#7a4ee0]"
+        >
+          Download CV
+        </button>
+        <button
+          onClick={handleView}
+          className="bg-[#915EFF] text-white px-4 py-2 rounded-lg hover:bg-[#7a4ee0]"
+        >
+          View CV
+        </button>
+      </div>
+      <div className="mt-4 flex justify-center">
+        <button
+          onClick={closeModal}
+          className="text-center w-56 bg-[#7a4ee0] text-white px-4 py-2 rounded-lg"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
