@@ -125,7 +125,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+// import { ComputersCanvas } from "./canvas";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import My_Cv from "../assets/My Cv/Muhammad Aman CV-2.pdf"; // Ensure this path is correct
 
@@ -207,7 +207,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
 
       {/* Modal */}
       {isModalOpen && (
