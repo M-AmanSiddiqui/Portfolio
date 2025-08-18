@@ -173,12 +173,13 @@ const Education = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have learned so far
-        </p>
+       
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Education.
         </h2>
+         <p className={`${styles.sectionSubText} text-center`}>
+          What I have learned so far
+        </p>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
