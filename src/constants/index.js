@@ -190,21 +190,11 @@ const experiences = [
     company_name: "Saylani Mass IT",
     icon: smit,
     iconBg: "#FFFFFF",
-<<<<<<< HEAD
     date: "October 2024 - January 2025",
     points: [
       "Developed and maintained web applications using React.js and modern technologies.",
       "Implemented responsive designs ensuring smooth cross-browser compatibility.",
       "Collaborated with team members to improve code quality and enhance problem-solving skills.",
-=======
-    date: "October 2024 - january 2025",
-    points: [
-      "Developed and maintained web applications using React.js and other modern technologies.",
-      "Collaborated with designers, product managers, and developers to build user-friendly interfaces.",
-      "Implemented responsive designs and ensured cross-browser compatibility.",
-      "Participated in code reviews and improved code quality through best practices.",
-      "Gained hands-on experience in frontend and backend development, enhancing problem-solving skills.",
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
     ],
   },
   {
@@ -214,24 +204,13 @@ const experiences = [
     iconBg: "#FFFFFF",
     date: "Jan 2025 - Feb 2025",
     points: [
-<<<<<<< HEAD
       "Built and maintained responsive web applications using React.js.",
       "Designed and developed the company’s portfolio website with a modern UI/UX.",
       "Worked closely with designers and backend developers to deliver scalable products.",
     ],
   },
-=======
-      "Developed and maintained responsive web applications using React.js and modern frontend technologies.",
-"Designed and built the company’s portfolio website in React, ensuring a smooth user experience and modern UI.",
-"Collaborated with designers, product managers, and backend developers to create high-quality and scalable products.",
-"Ensured cross-browser compatibility and optimized performance for different devices.",
-"Participated in code reviews, provided feedback, and improved code quality through best practices.",
-    ],
-  },
-  
- 
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
 ];
+
 
   const achievements = [
     {

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // import React from "react";
 // import Tilt from "react-parallax-tilt";
 // import { motion } from "framer-motion";
@@ -63,7 +63,6 @@
 //     </>
 //   );
 // };
-
 // export default SectionWrapper(About, "about");
 import React from "react";
 import Tilt from "react-parallax-tilt";
@@ -73,110 +72,55 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-=======
-import React from "react";
-import Tilt from "react-parallax-tilt";
-import { motion } from "framer-motion";
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
-
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
+// ---- ServiceCard ----
 const ServiceCard = ({ index, title, icon }) => (
-<<<<<<< HEAD
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-=======
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-<<<<<<< HEAD
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
-        <h3 className="text-white text-[20px] font-bold text-center">
-=======
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
-          {title}
-        </h3>
+      <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
       </div>
     </motion.div>
   </Tilt>
 );
 
+// ---- About ----
 const About = () => {
   return (
     <>
-<<<<<<< HEAD
-      {/* --- About Heading --- */}
-=======
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
+      {/* Heading */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-<<<<<<< HEAD
-      {/* --- About Paragraph --- */}
+      {/* Paragraph */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a skilled web developer with experience in JavaScript,
-        specializing in frameworks like React and Node.js. I quickly
-        learn and collaborate with clients to build efficient, scalable,
-        and user-friendly web solutions. Let’s bring your ideas to life!
+        specializing in frameworks like React and Node.js. I quickly learn and
+        collaborate with clients to build efficient, scalable, and
+        user-friendly web solutions. Let’s bring your ideas to life!
       </motion.p>
 
-      {/* --- Desktop view: grid (4 in one row) --- */}
-      <div className="mt-20 hidden md:grid grid-cols-4 gap-10">
-=======
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-  I'm a skilled web developer with experience in JavaScript,
-   specializing in frameworks like React and Node.js. I quickly
-    learn and collaborate with clients to build efficient, scalable,
-     and user-friendly web solutions. Let’s bring your ideas to life!
-  
-      </motion.p>
-
-      <div className='mt-20 flex flex-wrap gap-10'>
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
+      {/* Desktop view */}
+      <div className="mt-20 hidden md:grid grid-cols-4 gap-8 ">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-<<<<<<< HEAD
 
-      {/* --- Mobile view: Swiper slider --- */}
+      {/* Mobile view: Swiper slider */}
       <div className="mt-20 md:hidden w-full">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -188,7 +132,7 @@ const About = () => {
             delay: 0,
             disableOnInteraction: false,
           }}
-          speed={6000} // slow continuous move
+          speed={2000} // slow continuous move
           className="rounded-[20px]"
         >
           {services.map((service, index) => (
@@ -200,8 +144,6 @@ const About = () => {
           ))}
         </Swiper>
       </div>
-=======
->>>>>>> fde8f28716165f065ac9d902411d0134126401c2
     </>
   );
 };
