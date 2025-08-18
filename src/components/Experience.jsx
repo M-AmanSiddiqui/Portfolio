@@ -159,7 +159,7 @@ const ExperienceCard = ({ experience }) => {
         )}
         <button
           onClick={() => setShowPoints(!showPoints)}
-          className="mt-2 text-sm text-blue-400 underline"
+          className="mt-2 text-sm text-[#7a4ee0] underline"
         >
           {showPoints ? "Show Less" : "Show More"}
         </button>
