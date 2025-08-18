@@ -19,8 +19,12 @@
     "react-parallax-tilt": "^1.7.284",
     "react-router-dom": "^6.8.1",
     "react-toastify": "^11.0.5",
+<<<<<<< HEAD
     "react-vertical-timeline-component": "^3.6.0",
     "swiper": "^11.2.10"
+=======
+    "react-vertical-timeline-component": "^3.6.0"
+>>>>>>> fde8f28716165f065ac9d902411d0134126401c2
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

@@ -233,7 +233,7 @@ const Hero = () => {
                 onClick={closeModal}
                 className="text-center w-56 bg-[#7a4ee0] text-white px-4 py-2 rounded-lg"
               >
-                Close
+                Clos
               </button>
             </div>
           </div>
