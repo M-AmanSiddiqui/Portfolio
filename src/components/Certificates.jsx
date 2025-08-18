@@ -162,7 +162,7 @@ function Achievements() {
   );
 
   return (
- <div className="bg-[#0a0a1a] text-white px-4 sm:px-6 md:px-10 py-6 sm:py-10 flex flex-col items-center">
+ <div className="bg-[#0a0a1a] text-white px-4 sm:px-6 md:px-10 py-4 sm:py-10 flex flex-col items-center">
 
 
       {/* Heading & Subtext */}
@@ -183,7 +183,7 @@ function Achievements() {
       </div>
 
       {/* Mobile Swiper */}
-      <div className="mt-4 md:hidden w-full max-w-md relative">
+      <div className="mt-4 md:hidden w-full max-w-md relative mb-4 sm:mb-6">
         {/* Count / Fraction */}
         <div className={`${styles.sectionSubText} text-center font-semibold mb-4`}>
           {currentSlide} / {achievements.length}

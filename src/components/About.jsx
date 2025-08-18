@@ -133,7 +133,7 @@ const About = () => {
             disableOnInteraction: false,
           }}
           speed={2000} // slow continuous move
-          className="rounded-[20px]"
+          className="rounded-[20px] custom-purple" 
         >
           {services.map((service, index) => (
             <SwiperSlide key={service.title}>

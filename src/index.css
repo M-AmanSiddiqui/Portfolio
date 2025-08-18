@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.swiper-pagination-bullet {
+  @apply bg-custom-purple opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-custom-purple opacity-100;
+}
+
 * {
   margin: 0;
   padding: 0;
