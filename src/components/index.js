@@ -6,7 +6,7 @@ import Experience from "./Experience";
 import Works from "./Works";
 import Certificates from "./Certificates";
 import Contact from "./Contact";
-import Education from './canvas/Education';
+import Education from './Education';
 
 
 export {
