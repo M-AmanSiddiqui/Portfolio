@@ -36,19 +36,18 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/three js.png";
 import Bootstrap from "./tech/bootstrap.png";
+import python from "./tech/python.png"
 
 // Companies
 import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
 // Projects
-import carrent from "./Project/carrent.png";
-import jobit from "./Project/jobit.png";
-import tripguide from "./Project/tripguide.png";
 import todoapp from "./Project/todoapp.png"
 import todo1 from "./Project/todo1.png"
 import todo2 from "./Project/todo2.png"
 import todo3 from "./Project/todo3.png"
+import financeApp from "./Project/finance-management.png"
 
 
 // Certificates
@@ -109,19 +108,18 @@ export {
   tailwind,
   typescript,
   threejs,
+  python,
   
   // Companies
   smit,
   stolid,
   
   // Projects
-  carrent,
-  jobit,
-  tripguide,
   todoapp,
   todo1,
   todo2,
   todo3,
+  financeApp,
   
   // Certificates
   Simplilearn_FrontEnd,

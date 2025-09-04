@@ -29,19 +29,18 @@ import {
   materialUI,
   shadecn,
   expressjs,
+  python,
   
   // Companies
   smit,
   stolid,
   
   // Projects
-  carrent,
-  jobit,
-  tripguide,
   todoapp,
   todo1,
   todo2,
   todo3,
+  financeApp,
   
   // Certificates
   Simplilearn_FrontEnd,
@@ -117,7 +116,8 @@ const skills = [
   { name: "HTML 5", icon: html },
   { name: "CSS 3", icon: css },
   { name: "JavaScript", icon: javascript },
- { name: "React JS", icon: reactjs },
+  { name: "Python", icon: python },
+  { name: "React JS", icon: reactjs },
   { name: "Redux", icon: redux },
   { name: "Next.js", icon: nextjs },
   { name: "Node.js", icon: nodejs },
@@ -304,46 +304,49 @@ const experiences = [
 
 
 const projects = [
-  {
-    name: "Full Stack Todo App",
-    description:
-      "A full-stack application that allows users to manage tasks in real-time with authentication and a responsive UI.",
-    tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "nodejs", color: "green-text-gradient" },
-      { name: "express", color: "yellow-text-gradient" },
-      { name: "mongodb", color: "pink-text-gradient" },
-    ],
-    images: [todoapp, todo1, todo2, todo3], // ✅ array bana diya
-    source_code_link: "https://github.com/M-AmanSiddiqui/Todo_Frotend-JS",
-    live_demo_link: "https://todo-frotend-js.vercel.app/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "A job search web app to explore openings, salary ranges, and job listings by location.",
-    tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "restapi", color: "green-text-gradient" },
-      { name: "scss", color: "pink-text-gradient" },
-    ],
-    images: [jobit], // ✅ array bana diya
-    source_code_link: "https://github.com/",
-    live_demo_link: "",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A travel booking platform for flights, hotels, and cars with curated destination recommendations.",
-    tags: [
-      { name: "nextjs", color: "blue-text-gradient" },
-      { name: "supabase", color: "green-text-gradient" },
-      { name: "css", color: "pink-text-gradient" },
-    ],
-    images: [tripguide], // ✅ array bana diya
-    source_code_link: "https://github.com/",
-    live_demo_link: "",
-  },
+{
+  name: "Full Stack Todo App",
+  description:
+    "A full-stack task management web app where users can create, update, and delete tasks in real-time. Built with the MERN stack, it includes authentication, secure database storage, and a fully responsive UI with smooth interactions.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "nodejs", color: "green-text-gradient" },
+    { name: "express", color: "yellow-text-gradient" },
+    { name: "mongodb", color: "pink-text-gradient" },
+  ],
+  images: [todoapp, todo1, todo2, todo3], 
+  source_code_link: "https://github.com/M-AmanSiddiqui/Todo_Frotend-JS",
+  live_demo_link: "https://todo-frotend-js.vercel.app/",
+},
+{
+  name: "CodeTec Solutions",
+  description:
+    "A professional portfolio website designed for CodeTec Solutions, highlighting services, projects, and expertise. Built with React, Tailwind CSS, and Framer Motion, it delivers a clean, animated, and fully responsive user interface.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "tailwind", color: "pink-text-gradient" },
+    { name: "framer-motion", color: "green-text-gradient" },
+  ],
+  images: [], 
+  source_code_link: "https://github.com/M-AmanSiddiqui/CodetecSolutions-React",
+  live_demo_link: "https://codetecsolutions.vercel.app/",
+},
+
+  
+{
+  name: "Finance Management",
+  description:
+    "A personal finance tracker that helps users manage income, expenses, and balance with a clean UI. Features include transaction history, categorized tracking, and responsive design for mobile and desktop.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "tailwindcss", color: "pink-text-gradient" },
+    { name: "javascript", color: "yellow-text-gradient" },
+  ],
+  images: [financeApp], // only one screenshot
+  source_code_link: "https://github.com/M-AmanSiddiqui/Finance-Management-React",
+  live_demo_link: "https://finance-management-psi.vercel.app/",
+},
+
 ];
 
 

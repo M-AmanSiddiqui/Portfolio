@@ -11,6 +11,31 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+// Custom CSS for better mobile pagination
+const customStyles = `
+  .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1 !important;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 4px !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: #8b5cf6 !important;
+    transform: scale(1.2) !important;
+  }
+  .swiper-pagination {
+    bottom: 10px !important;
+  }
+`;
+
+// Inject custom styles
+if (typeof document !== 'undefined') {
+  const styleElement = document.createElement('style');
+  styleElement.textContent = customStyles;
+  document.head.appendChild(styleElement);
+}
+
 // ---- ProjectCard ----
 const ProjectCard = ({
   index,
@@ -107,7 +132,9 @@ const Works = () => {
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [currentSlide, setCurrentSlide] = useState(0);
   const imageRef = useRef(null);
+  const swiperRef = useRef(null);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -131,6 +158,19 @@ const Works = () => {
       document.body.style.overflow = 'unset';
     }
   }, [modalOpen]);
+
+  // Auto-slide effect for mobile with Swiper control
+  useEffect(() => {
+    if (window.innerWidth <= 768 && swiperRef.current) { // Only on mobile
+      const interval = setInterval(() => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+          swiperRef.current.swiper.slideNext();
+        }
+      }, 4000); // Change slide every 4 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, []);
 
   const openModal = (images, title, githubLink) => {
     console.log('Opening modal with:', { images, title, githubLink });
@@ -237,6 +277,18 @@ const Works = () => {
     setPan({ x: 0, y: 0 });
   };
 
+  const nextSlide = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const prevSlide = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -269,20 +321,53 @@ const Works = () => {
         ))}
       </div>
 
-      {/* Mobile Swiper */}
-      <div className="mt-10 md:hidden w-full">
+      {/* Mobile Enhanced Swiper with Counter and Controls */}
+      <div className="mt-10 md:hidden w-full px-4">
+        {/* Simple Counter Display */}
+        <div className="flex justify-center items-center mb-6">
+          <div className="bg-black bg-opacity-70 text-white px-4 py-2 rounded-full">
+            <span className="text-sm font-medium">{currentSlide + 1}</span>
+            <span className="text-sm mx-2">/</span>
+            <span className="text-sm font-medium">{projects.length}</span>
+          </div>
+        </div>
+
+        {/* Enhanced Swiper */}
         <Swiper
-          modules={[Pagination]}
-          spaceBetween={20}
-          slidesPerView={"auto"}
+          modules={[Pagination, Autoplay]}
+          spaceBetween={16}
+          slidesPerView={1}
           loop={true}
-          freeMode={true}
-          speed={2000}
+          freeMode={false}
+          speed={800}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
+          pagination={{ 
+            clickable: true,
+            dynamicBullets: true,
+            bulletClass: 'swiper-pagination-bullet',
+            bulletActiveClass: 'swiper-pagination-bullet-active'
+          }}
+          onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
           className="w-full"
+          style={{ height: 'auto', minHeight: '450px' }}
+          ref={swiperRef}
         >
           {projects.map((project, index) => (
-            <SwiperSlide key={index} className="!w-[300px]">
-              <ProjectCard index={index} {...project} openModal={openModal} />
+            <SwiperSlide key={index} className="!w-full !h-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="w-full h-full flex justify-center"
+              >
+                <div className="w-full max-w-[350px]">
+                  <ProjectCard index={index} {...project} openModal={openModal} />
+                </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
