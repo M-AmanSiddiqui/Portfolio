@@ -12,6 +12,7 @@ import web from "./web.png";
 import BoardSecondary from "./Education/board of secondary karachi.jpg";
 import BoardIntermediate from "./Education/Board_of_Intermediate_Education,_Karachi_.png";
 import BoardTechnical from "./Education/board of technical karachi.jpg";
+import Graduation from "./Education/Dawood_University_Of_Engineering_&_Technology_LOGO.png"
 
 // Tech Stack
 import css from "./tech/css.png";
@@ -41,9 +42,14 @@ import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
 // Projects
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./Project/carrent.png";
+import jobit from "./Project/jobit.png";
+import tripguide from "./Project/tripguide.png";
+import todoapp from "./Project/todoapp.png"
+import todo1 from "./Project/todo1.png"
+import todo2 from "./Project/todo2.png"
+import todo3 from "./Project/todo3.png"
+
 
 // Certificates
 import Simplilearn_FrontEnd from "./Certificate/Front End Development.jpg";
@@ -51,10 +57,13 @@ import JavaScript_Essential_1 from "./Certificate/Cisco JavaScript Essential 1.J
 import JavaScript_Essential_2 from "./Certificate/Cisco JavaScript Essential 2.JPG";
 import HackerRank_JS_Basic from "./Certificate/HackerRank JavaScript.JPG";
 import HackerRank_JS_Intermediate from "./Certificate/HackerRank JavaScript (2).JPG";
+import ProbemSolving_Basic from "./Certificate/Problem Solving-Basic.png";
+import ProblemSolving_Intermediate from "./Certificate/Problem Solving-Intermediate.png";
 import Infotech_DIT from "./Certificate/DIT.jpg";
 
 // CV
 import My_Cv from "./My Cv/Muhammad Aman CV-2.pdf" 
+import { ImRoad } from "react-icons/im";
 
 
 export {
@@ -76,6 +85,7 @@ export {
   BoardIntermediate,
   BoardTechnical,
   BoardSecondary,
+  Graduation ,
   
   // Tech Stack
   css,
@@ -108,6 +118,10 @@ export {
   carrent,
   jobit,
   tripguide,
+  todoapp,
+  todo1,
+  todo2,
+  todo3,
   
   // Certificates
   Simplilearn_FrontEnd,
@@ -116,4 +130,6 @@ export {
   HackerRank_JS_Basic,
   HackerRank_JS_Intermediate,
   Infotech_DIT,
+  ProbemSolving_Basic,
+  ProblemSolving_Intermediate,
 };

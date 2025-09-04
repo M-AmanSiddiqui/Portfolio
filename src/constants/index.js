@@ -6,6 +6,7 @@ import {
   BoardIntermediate,
   BoardTechnical,
   BoardSecondary,
+  Graduation ,
   
   // Tech Stack
   css,
@@ -37,6 +38,10 @@ import {
   carrent,
   jobit,
   tripguide,
+  todoapp,
+  todo1,
+  todo2,
+  todo3,
   
   // Certificates
   Simplilearn_FrontEnd,
@@ -45,6 +50,8 @@ import {
   HackerRank_JS_Basic,
   HackerRank_JS_Intermediate,
   Infotech_DIT,
+  ProbemSolving_Basic,
+  ProblemSolving_Intermediate,
   
   // Misc
   backend,
@@ -141,21 +148,32 @@ const skills = [
 
 const education = [
   {
-    title: "Matriculation",
-    institution: "Board of Secondary Education karachi",
-    icon: BoardSecondary,
+    title: "Undergraduate - BS Computer Science",
+    institution: "Dawood University of Engineering & Technology, Karachi",
+    icon: Graduation , 
     iconBg: "#FFFFFF",
-    date: "Sep 2020 - Sep 2022",
+    date: "Aug 2025 - Present",
     points: [
-      "Studied at Matchless Grammar Secondary School.",
-      "Developed a strong foundation in Mathematics, Physics, Chemistry, and Biology.",
-      "Conducted practical experiments to understand scientific concepts and problem-solving techniques."
-]
-
+      "Enrolled in the BS Computer Science program at Dawood University of Engineering & Technology.",
+      "Building strong fundamentals in data structures, algorithms, and computer systems.",
+      "Exploring advanced concepts in programming, databases, and software engineering to enhance technical expertise."
+    ]
+  },
+  {
+    title: "DAE in Chemical Engineering",
+    institution: "Board of Technical Education Karachi",
+    icon: BoardTechnical,
+    iconBg: "#FFFFFF",
+    date: "Oct 2022 - Oct 2025",
+    points: [
+      "Studying at Government College of Technology Karachi.",
+      "Gained in-depth knowledge of chemical processes, thermodynamics, and material sciences.",
+      "Worked on projects involving distillation, heat transfer, and process optimization."
+    ]
   },
   {
     title: "Intermediate",
-    institution: "Board of Intermediate Education karachi",
+    institution: "Board of Intermediate Education Karachi",
     icon: BoardIntermediate,
     iconBg: "#FFFFFF",
     date: "Sep 2022 - Sep 2024",
@@ -166,37 +184,24 @@ const education = [
     ]
   },
   {
-    title: "DAE in Chemical Engineering",
-    institution: "Board of Technical Education karachi",
-    icon: BoardTechnical,
+    title: "Matriculation",
+    institution: "Board of Secondary Education Karachi",
+    icon: BoardSecondary,
     iconBg: "#FFFFFF",
-    date: "Oct 2022 - Oct 2025",
+    date: "Sep 2020 - Sep 2022",
     points: [
-      "Studying at Government College of Technology Karachi",
-      "Gained in-depth knowledge of chemical processes, thermodynamics, and material sciences.",
-      "Worked on projects involving distillation, heat transfer, and process optimization."
+      "Studied at Matchless Grammar Secondary School.",
+      "Developed a strong foundation in Mathematics, Physics, Chemistry, and Biology.",
+      "Conducted practical experiments to understand scientific concepts and problem-solving techniques."
     ]
-    
-  },
-  
- 
+  }
 ];
 
 
 
+
 const experiences = [
-  {
-    title: "Web Development Intern",
-    company_name: "Saylani Mass IT",
-    icon: smit,
-    iconBg: "#FFFFFF",
-    date: "October 2024 - January 2025",
-    points: [
-      "Developed and maintained web applications using React.js and modern technologies.",
-      "Implemented responsive designs ensuring smooth cross-browser compatibility.",
-      "Collaborated with team members to improve code quality and enhance problem-solving skills.",
-    ],
-  },
+ 
   {
     title: "Junior Frontend Developer",
     company_name: "Stolidzone Technologies",
@@ -207,6 +212,18 @@ const experiences = [
       "Built and maintained responsive web applications using React.js.",
       "Designed and developed the company’s portfolio website with a modern UI/UX.",
       "Worked closely with designers and backend developers to deliver scalable products.",
+    ],
+  },
+   {
+    title: "Web Development Intern",
+    company_name: "Saylani Mass IT",
+    icon: smit,
+    iconBg: "#FFFFFF",
+    date: "October 2024 - January 2025",
+    points: [
+      "Developed and maintained web applications using React.js and modern technologies.",
+      "Implemented responsive designs ensuring smooth cross-browser compatibility.",
+      "Collaborated with team members to improve code quality and enhance problem-solving skills.",
     ],
   },
 ];
@@ -250,9 +267,26 @@ const experiences = [
       provider: "HackerRank",
       date: "March 15, 2025",
       description: "Intermediate JavaScript skills, covering advanced functions, closures, and object-oriented concepts.",
-      image: HackerRank_JS_Intermediate, // Intermediate Badge
-      link: "https://www.hackerrank.com/certificates/e6f7612b19f6" // Replace with actual link
+      image: HackerRank_JS_Intermediate, 
+      link: "https://www.hackerrank.com/certificates/e6f7612b19f6" 
     },
+    {
+  title: "Problem Solving (Basic)",
+  provider: "HackerRank",
+  date: "March 21, 2025", 
+  description: "Certification for fundamental problem-solving skills using programming concepts.",
+  image: ProbemSolving_Basic , 
+  link: "https://www.hackerrank.com/certificates/iframe/e867083083e1" 
+},
+{
+  title: "Problem Solving (Intermediate)",
+  provider: "HackerRank",
+  date: "March 15, 2025", 
+  description: "Certification for intermediate-level problem-solving, algorithms, and computational thinking.",
+  image: ProblemSolving_Intermediate , 
+  link: "https://www.hackerrank.com/certificates/e6f7612b19f6" 
+},
+
     {
       title: "D.I.T",
       provider: "Infotech",
@@ -269,71 +303,48 @@ const experiences = [
 
 
 
-
 const projects = [
   {
-    name: "Car Rent",
+    name: "Full Stack Todo App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A full-stack application that allows users to manage tasks in real-time with authentication and a responsive UI.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "express", color: "yellow-text-gradient" },
+      { name: "mongodb", color: "pink-text-gradient" },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    images: [todoapp, todo1, todo2, todo3], // ✅ array bana diya
+    source_code_link: "https://github.com/M-AmanSiddiqui/Todo_Frotend-JS",
+    live_demo_link: "https://todo-frotend-js.vercel.app/",
   },
   {
     name: "Job IT",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A job search web app to explore openings, salary ranges, and job listings by location.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "restapi", color: "green-text-gradient" },
+      { name: "scss", color: "pink-text-gradient" },
     ],
-    image: jobit,
+    images: [jobit], // ✅ array bana diya
     source_code_link: "https://github.com/",
+    live_demo_link: "",
   },
   {
     name: "Trip Guide",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A travel booking platform for flights, hotels, and cars with curated destination recommendations.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "supabase", color: "green-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
     ],
-    image: tripguide,
+    images: [tripguide], // ✅ array bana diya
     source_code_link: "https://github.com/",
+    live_demo_link: "",
   },
 ];
+
 
 export { services, skills, experiences, achievements, projects, education };
