@@ -275,7 +275,7 @@ const experiences = [
   provider: "HackerRank",
   date: "March 21, 2025", 
   description: "Certification for fundamental problem-solving skills using programming concepts.",
-  image: ProbemSolving_Basic , 
+  image: ProblemSolving_Basic , 
   link: "https://www.hackerrank.com/certificates/iframe/e867083083e1" 
 },
 {
