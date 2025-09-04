@@ -56,8 +56,8 @@ import JavaScript_Essential_1 from "./Certificate/Cisco JavaScript Essential 1.J
 import JavaScript_Essential_2 from "./Certificate/Cisco JavaScript Essential 2.JPG";
 import HackerRank_Basic from "./Certificate/HackerRank JavaScript.JPG";
 import HackerRank_Intermediate from "./Certificate/HackerRank JavaScript (2).JPG";
-import ProblemSolvingB from "./Certificate/Problem Solving.PNG";
-import ProblemSolvingI from "./Certificate/Problem Solving Inter.PNG"
+import ProblemSolvingB from "./Certificate/problem-solving.png";
+import ProblemSolvingI from "./Certificate/problem-solving-inter.png"
 import Infotech_DIT from "./Certificate/DIT.jpg";
 
 // CV
