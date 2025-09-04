@@ -46,10 +46,10 @@ import {
   Simplilearn_FrontEnd,
   JavaScript_Essential_1,
   JavaScript_Essential_2,
-  HackerRank_JS_Basic,
-  HackerRank_JS_Intermediate,
+  HackerRank_Basic,
+  HackerRank_Intermediate,
   Infotech_DIT,
-  ProbemSolving_Basic,
+  ProblemSolving_Basic,
   ProblemSolving_Intermediate,
   
   // Misc
@@ -259,7 +259,7 @@ const experiences = [
       provider: "HackerRank",
       date: "March 5, 2025",
       description: "Basic JavaScript coding skills, focusing on core concepts and syntax.",
-      image: HackerRank_JS_Basic, // Basic Badge
+      image: HackerRank_Basic, // Basic Badge
       link: "https://www.hackerrank.com/certificates/iframe/e867083083e1" // Replace with actual link
     },
     {
@@ -267,7 +267,7 @@ const experiences = [
       provider: "HackerRank",
       date: "March 15, 2025",
       description: "Intermediate JavaScript skills, covering advanced functions, closures, and object-oriented concepts.",
-      image: HackerRank_JS_Intermediate, 
+      image: HackerRank_Intermediate, 
       link: "https://www.hackerrank.com/certificates/e6f7612b19f6" 
     },
     {

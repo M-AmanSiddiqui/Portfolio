@@ -54,10 +54,10 @@ import financeApp from "./Project/finance-management.png"
 import Simplilearn_FrontEnd from "./Certificate/Front End Development.jpg";
 import JavaScript_Essential_1 from "./Certificate/Cisco JavaScript Essential 1.JPG";
 import JavaScript_Essential_2 from "./Certificate/Cisco JavaScript Essential 2.JPG";
-import HackerRank_JS_Basic from "./Certificate/HackerRank JavaScript.JPG";
-import HackerRank_JS_Intermediate from "./Certificate/HackerRank JavaScript (2).JPG";
-import ProblemSolving_Basic from "./Certificate/Problem Solving-Basic.PNG";
-import ProblemSolving_Intermediate from "./Certificate/Problem Solving-Intermediate.PNG";
+import HackerRank_Basic from "./Certificate/HackerRank JavaScript.JPG";
+import HackerRank_Intermediate from "./Certificate/HackerRank JavaScript (2).JPG";
+import ProblemSolving_Basic from "./Certificate/Problem Solving-Basic.png";
+import ProblemSolving_Intermediate from "./Certificate/Problem Solving-Intermediate.png"
 import Infotech_DIT from "./Certificate/DIT.jpg";
 
 // CV
@@ -125,8 +125,8 @@ export {
   Simplilearn_FrontEnd,
   JavaScript_Essential_1,
   JavaScript_Essential_2,
-  HackerRank_JS_Basic,
-  HackerRank_JS_Intermediate,
+  HackerRank_Basic,
+  HackerRank_Intermediate,
   Infotech_DIT,
   ProblemSolving_Basic,
   ProblemSolving_Intermediate,
