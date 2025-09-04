@@ -49,8 +49,8 @@ import {
   HackerRank_Basic,
   HackerRank_Intermediate,
   Infotech_DIT,
-  ProblemSolving_Basic,
-  ProblemSolving_Intermediate,
+  ProblemSolvingB,
+  ProblemSolvingI,
   
   // Misc
   backend,
@@ -275,7 +275,7 @@ const experiences = [
   provider: "HackerRank",
   date: "March 21, 2025", 
   description: "Certification for fundamental problem-solving skills using programming concepts.",
-  image: ProblemSolving_Basic , 
+  image: ProblemSolvingB, 
   link: "https://www.hackerrank.com/certificates/iframe/e867083083e1" 
 },
 {
@@ -283,7 +283,7 @@ const experiences = [
   provider: "HackerRank",
   date: "March 15, 2025", 
   description: "Certification for intermediate-level problem-solving, algorithms, and computational thinking.",
-  image: ProblemSolving_Intermediate , 
+  image: ProblemSolvingI, 
   link: "https://www.hackerrank.com/certificates/e6f7612b19f6" 
 },
 
