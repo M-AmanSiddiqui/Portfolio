@@ -18,6 +18,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = toggle ? "hidden" : "auto";
   }, [toggle]);
