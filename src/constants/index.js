@@ -239,7 +239,7 @@ const experiences = [
   date: "June 15, 2025",
   description: "Beginner-friendly program covering core software development concepts, programming fundamentals, problem-solving, version control, and essential industry practices required for entry-level developer roles.",
   image: Career_Essentials_Software_Development, // Certificate Badge (replace with your image variable)
-  link: "https://www.credly.com/badges/REPLACE_WITH_YOUR_BADGE_ID" // Add your actual certificate link
+  link: "https://www.linkedin.com/learning/certificates/51b581c2f22d11b210eeac985254c645f6bf8ea9e978c17c7d91dbc3c480b7cd?trk=share_certificate" // Add your actual certificate link
 }
 ,
     {
@@ -256,7 +256,7 @@ const experiences = [
   date: "June 15, 2025",
   description: "Comprehensive introduction to data analysis workflows — data collection, cleaning, visualization, and basic statistical analysis using Excel and Power BI. Includes hands-on projects and career-ready skills for entry-level data analyst roles.",
   image: Career_Essentials_Data_Analysis, // Certificate Badge (replace with your import/variable)
-  link: "https://www.credly.com/badges/REPLACE_WITH_YOUR_BADGE_ID" // Replace with actual link
+  link: "https://www.linkedin.com/learning/certificates/df2f9399568efd33245ce7b86f62176201e98fdd2fa3369c3c469a855637c3fe?trk=share_certificate" // Replace with actual link
 },
 
     {
