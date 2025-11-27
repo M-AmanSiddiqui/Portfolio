@@ -59,6 +59,8 @@ import HackerRank_Intermediate from "./Certificate/HackerRank JavaScript (2).JPG
 import ProblemSolvingB from "./Certificate/problem-solving.png";
 import ProblemSolvingI from "./Certificate/problem-solving-inter.png"
 import Infotech_DIT from "./Certificate/DIT.jpg";
+import Career_Essentials_Data_Analysis from "./Certificate/analysisbymicrosoft.JPG"
+import Career_Essentials_Software_Development from "./Certificate/softwarebymicrosoft.JPG"
 
 // CV
 import My_Cv from "./My Cv/Muhammad Aman CV-2.pdf" 
@@ -130,4 +132,7 @@ export {
   Infotech_DIT,
   ProblemSolvingB,
   ProblemSolvingI,
+  Career_Essentials_Software_Development,
+  Career_Essentials_Data_Analysis
+
 };

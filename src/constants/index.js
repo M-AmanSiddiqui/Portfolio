@@ -51,6 +51,8 @@ import {
   Infotech_DIT,
   ProblemSolvingB,
   ProblemSolvingI,
+  Career_Essentials_Software_Development,
+  Career_Essentials_Data_Analysis,
   
   // Misc
   backend,
@@ -230,6 +232,16 @@ const experiences = [
 
 
   const achievements = [
+
+    {
+  title: "Career Essentials in Software Development",
+  provider: "Microsoft & LinkedIn Learning",
+  date: "June 15, 2025",
+  description: "Beginner-friendly program covering core software development concepts, programming fundamentals, problem-solving, version control, and essential industry practices required for entry-level developer roles.",
+  image: Career_Essentials_Software_Development, // Certificate Badge (replace with your image variable)
+  link: "https://www.credly.com/badges/REPLACE_WITH_YOUR_BADGE_ID" // Add your actual certificate link
+}
+,
     {
       title: "Front-End Development",
       provider: "Simplilearn",
@@ -238,6 +250,15 @@ const experiences = [
       image: Simplilearn_FrontEnd, // Replace if available
    
     },
+    {
+  title: "Career Essentials in Data Analysis",
+  provider: "Microsoft & LinkedIn Learning",
+  date: "June 15, 2025",
+  description: "Comprehensive introduction to data analysis workflows — data collection, cleaning, visualization, and basic statistical analysis using Excel and Power BI. Includes hands-on projects and career-ready skills for entry-level data analyst roles.",
+  image: Career_Essentials_Data_Analysis, // Certificate Badge (replace with your import/variable)
+  link: "https://www.credly.com/badges/REPLACE_WITH_YOUR_BADGE_ID" // Replace with actual link
+},
+
     {
       title: "JavaScript Essentials 1",
       provider: "Cisco Networking Academy",
