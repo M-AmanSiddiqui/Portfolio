@@ -41,10 +41,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled web developer with experience in JavaScript,
-        specializing in frameworks like React and Node.js. I quickly learn and
-        collaborate with clients to build efficient, scalable, and
-        user-friendly web solutions. Let’s bring your ideas to life!
+       I'm a skilled web developer with experience in JavaScript, 
+  specializing in frameworks like React and Node.js. I quickly learn and 
+  collaborate with clients to build efficient, scalable, and 
+  user-friendly web solutions. Let’s bring your ideas to life! 
+  I also handle data, visualize insights, and automate workflows efficiently
       </motion.p>
 
       {/* Desktop view */}

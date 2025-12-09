@@ -30,6 +30,9 @@ import {
   shadecn,
   expressjs,
   python,
+  numpy,
+  pandas,
+  n8n,
   
   // Companies
   smit,
@@ -96,11 +99,7 @@ export const navLinks = [
  ];
 
 const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
+   {
     title: "Frontend Developer",
     icon: mobile,
   },
@@ -109,7 +108,12 @@ const services = [
     icon: backend,
   },
   {
-    title: "UI Developer",
+    title: "Python Developer",
+    icon: web,
+  },
+ 
+  {
+    title: "Automation Builder",
     icon: creator,
   },
 ];
@@ -118,7 +122,7 @@ const skills = [
   { name: "HTML 5", icon: html },
   { name: "CSS 3", icon: css },
   { name: "JavaScript", icon: javascript },
-  { name: "Python", icon: python },
+  
   { name: "React JS", icon: reactjs },
   { name: "Redux", icon: redux },
   { name: "Next.js", icon: nextjs },
@@ -140,6 +144,10 @@ const skills = [
   { name: "GitHub", icon: github },
   { name: "Vercel", icon: vercel },
   { name: "Netlify", icon: netlify },
+  { name: "Python", icon: python },
+  { name: "Numpy", icon: numpy },
+  { name: "Pandas", icon: pandas },
+  { name: "n8n", icon: n8n },
 
  
  

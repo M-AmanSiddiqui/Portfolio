@@ -37,7 +37,9 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/three js.png";
 import Bootstrap from "./tech/bootstrap.png";
 import python from "./tech/python.png"
-
+import numpy from "./tech/numpy.png"
+import pandas from "./tech/pandas.png"
+import n8n from "./tech/n8n.png"
 // Companies
 import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
@@ -111,6 +113,9 @@ export {
   typescript,
   threejs,
   python,
+  numpy,
+  pandas,
+  n8n,
   
   // Companies
   smit,
