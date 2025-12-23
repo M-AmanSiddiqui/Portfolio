@@ -50,8 +50,8 @@ import todo1 from "./Project/todo1.png"
 import todo2 from "./Project/todo2.png"
 import todo3 from "./Project/todo3.png"
 import financeApp from "./Project/finance-management.png"
-import weatherone from "./Project/weather1.png"
-import weathertwo from "./Project/weather2.png"
+import weatherone from "./Project/weather.png"
+import weathertwo from "./Project/weatherhai.png"
 import codetec from "./Project/a1.mp4"
 
 
