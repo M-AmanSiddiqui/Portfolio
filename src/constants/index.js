@@ -44,8 +44,8 @@ import {
   todo2,
   todo3,
   financeApp,
-  weather1,
-  weather2,
+  weatherone,
+  weathertwo,
   codetec,
   
   // Certificates
@@ -373,7 +373,7 @@ const projects = [
     { name: "Plotly", color: "green-text-gradient" },
     { name: "ETL", color: "orange-text-gradient" },
   ],
-  images: [weather1,weather2], 
+  images: [weatherone,weathertwo], 
   source_code_link: "https://github.com/M-AmanSiddiqui/Weather_Hackathon_Task",
   live_demo_link: "https://weatherhackathontask-pzgtqys2zljjsfdsabjwbe.streamlit.app/",
 },
