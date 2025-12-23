@@ -45,14 +45,14 @@ import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
 // Projects
-import todoapp from "./Project/todoapp.png"
-import todo1 from "./Project/todo1.png"
-import todo2 from "./Project/todo2.png"
-import todo3 from "./Project/todo3.png"
-import financeApp from "./Project/finance-management.png"
-import weatherone from "./Project/weather.png"
-import weathertwo from "./Project/weatherhai.png"
-import codetec from "./Project/a1.mp4"
+import todoapp from "./project/todoapp.png"
+import todo1 from "./project/todo1.png"
+import todo2 from "./project/todo2.png"
+import todo3 from "./project/todo3.png"
+import financeApp from "./project/finance-management.png"
+import weatherone from "./project/weather.png"
+import weathertwo from "./project/weatherhai.png"
+import codetec from "./project/a1.mp4"
 
 
 // Certificates
