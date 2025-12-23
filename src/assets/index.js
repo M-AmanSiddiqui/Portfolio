@@ -50,6 +50,9 @@ import todo1 from "./Project/todo1.png"
 import todo2 from "./Project/todo2.png"
 import todo3 from "./Project/todo3.png"
 import financeApp from "./Project/finance-management.png"
+import weather1 from "./Project/weather1.png"
+import weather2 from "./Project/weather2.png"
+import codetec from "./Project/a1.mp4"
 
 
 // Certificates
@@ -127,6 +130,9 @@ export {
   todo2,
   todo3,
   financeApp,
+  weather1,
+  weather2,
+  codetec,
   
   // Certificates
   Simplilearn_FrontEnd,

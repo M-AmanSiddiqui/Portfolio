@@ -44,6 +44,9 @@ import {
   todo2,
   todo3,
   financeApp,
+  weather1,
+  weather2,
+  codetec,
   
   // Certificates
   Simplilearn_FrontEnd,
@@ -356,10 +359,25 @@ const projects = [
     { name: "tailwind", color: "pink-text-gradient" },
     { name: "framer-motion", color: "green-text-gradient" },
   ],
-  images: [], 
+  images: [codetec], 
   source_code_link: "https://github.com/M-AmanSiddiqui/CodetecSolutions-React",
   live_demo_link: "https://codetecsolutions.vercel.app/",
 },
+{
+  name: "Weather ETL Dashboard",
+  description:
+    "A real-time weather analytics dashboard built with Streamlit and Python. Implements a custom ETL pipeline, unit conversion, caching for performance, and interactive Plotly charts. Provides a fast, clean, and user-friendly interface for monitoring weather data.",
+  tags: [
+    { name: "Python", color: "blue-text-gradient" },
+    { name: "Streamlit", color: "pink-text-gradient" },
+    { name: "Plotly", color: "green-text-gradient" },
+    { name: "ETL", color: "orange-text-gradient" },
+  ],
+  images: [weather1,weather2], 
+  source_code_link: "https://github.com/M-AmanSiddiqui/Weather_Hackathon_Task",
+  live_demo_link: "https://weatherhackathontask-pzgtqys2zljjsfdsabjwbe.streamlit.app/",
+},
+
 
   
 {
