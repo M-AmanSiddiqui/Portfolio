@@ -39,10 +39,10 @@ import {
   stolid,
   
   // Projects
-  //todo4,
-  todo1,
-  todo2,
-  todo3,
+  todofour,
+  todoone,
+  todotwo,
+  todothree,
   financeApp,
   weatherone,
   weathertwo,
@@ -346,7 +346,7 @@ const projects = [
     { name: "express", color: "yellow-text-gradient" },
     { name: "mongodb", color: "pink-text-gradient" },
   ],
-  images: [todo1, todo2, todo3], 
+  images: [todofour, todoone, todotwo, todothree,], 
   source_code_link: "https://github.com/M-AmanSiddiqui/Todo_Frotend-JS",
   live_demo_link: "https://todo-frotend-js.vercel.app/",
 },

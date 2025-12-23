@@ -45,10 +45,10 @@ import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
 // Projects
-// import todo4 from "./project/todo4.png"
-import todo1 from "./project/todo1.png"
-import todo2 from "./project/todo2.png"
-import todo3 from "./project/todo3.png"
+import todofour from "./project/todofour.png"
+import todoone from "./project/todoone.png"
+import todotwo from "./project/todotwo.png"
+import todothree from "./project/todothree.png"
 import financeApp from "./project/finance-management.png"
 import weatherone from "./project/weatherone.png"
 import weathertwo from "./project/weathertwo.png"
@@ -125,10 +125,10 @@ export {
   stolid,
   
   // Projects
-  //todo4,
-  todo1,
-  todo2,
-  todo3,
+  todofour,
+  todoone,
+  todotwo,
+  todothree,
   financeApp,
   weatherone,
   weathertwo,
