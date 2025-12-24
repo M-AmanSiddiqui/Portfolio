@@ -114,6 +114,9 @@ const ProjectCard = ({
     if (!videoRef.current) return;
 
     if (videoRef.current.paused) {
+      // User-initiated play: ensure sound is ON by default
+      videoRef.current.muted = false;
+      setVideoMuted(false);
       videoRef.current.play();
       setVideoPlaying(true);
     } else {

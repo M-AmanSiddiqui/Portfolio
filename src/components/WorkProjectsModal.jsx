@@ -200,6 +200,9 @@ const ProjectsModal = ({
     e.stopPropagation();
     if (!videoRef.current) return;
     if (videoRef.current.paused) {
+      // User-initiated play: ensure sound is ON by default
+      videoRef.current.muted = false;
+      setIsMuted(false);
       videoRef.current.play().catch(() => {});
       setIsPlaying(true);
     } else {
