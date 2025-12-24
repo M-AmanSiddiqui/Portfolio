@@ -45,14 +45,15 @@ import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
 // Projects
-import todo from "./project/todo.png"
-import todoone from "./project/todoone.png"
-import todotwo from "./project/todotwo.png"
-import todothree from "./project/todothree.png"
-import financeApp from "./project/finance-management.png"
-import weatherone from "./project/weatherone.png"
-import weathertwo from "./project/weathertwo.png"
-import codetec from "./project/a1.mp4"
+// Note: folder name and extensions must match case-sensitively for Vercel (Linux)
+import todo from "./Project/todo.png";
+import todoone from "./Project/todoone.png";
+import todotwo from "./Project/todotwo.png";
+import todothree from "./Project/todothree.png";
+import financeApp from "./Project/finance-management.png";
+import weatherone from "./Project/weatherone.PNG";
+import weathertwo from "./Project/weathertwo.PNG";
+import codetec from "./Project/a1.mp4";
 
 
 // Certificates
