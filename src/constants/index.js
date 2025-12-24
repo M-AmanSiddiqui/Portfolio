@@ -47,6 +47,7 @@ import {
   weatherone,
   weathertwo,
   codetec,
+  stolidzone,
   
   // Certificates
   Simplilearn_FrontEnd,
@@ -363,6 +364,20 @@ const projects = [
   source_code_link: "https://github.com/M-AmanSiddiqui/CodetecSolutions-React",
   live_demo_link: "https://codetecsolutions.vercel.app/",
 },
+{
+  name: "Stolidzone Technologies",
+  description:
+    "A modern portfolio website currently under development for Stolidzone Technologies. Built with React, Tailwind CSS, and Framer Motion, it focuses on clean code, modern UI/UX, smooth animations, and user-friendly web solutions.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "tailwind", color: "pink-text-gradient" },
+    { name: "framer-motion", color: "green-text-gradient" },
+  ],
+  images: [stolidzone],
+  source_code_link: "https://github.com/M-AmanSiddiqui/Stolid-Zone-Technologies-React",
+  live_demo_link: "https://stolid-zone-technologies.vercel.app/",
+},
+
 {
   name: "Weather ETL Dashboard",
   description:

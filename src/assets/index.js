@@ -45,7 +45,6 @@ import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
 // Projects
-// Note: folder name and extensions must match case-sensitively for Vercel (Linux)
 import todo from "./Project/todo.png";
 import todoone from "./Project/todoone.png";
 import todotwo from "./Project/todotwo.png";
@@ -54,7 +53,7 @@ import financeApp from "./Project/finance-management.png";
 import weatherone from "./Project/weatherone.PNG";
 import weathertwo from "./Project/weathertwo.PNG";
 import codetec from "./Project/a1.mp4";
-
+import stolidzone from "./Project/stolidzone.mp4"
 
 // Certificates
 import Simplilearn_FrontEnd from "./Certificate/Front End Development.jpg";
@@ -134,7 +133,7 @@ export {
   weatherone,
   weathertwo,
   codetec,
-  
+  stolidzone,
   // Certificates
   Simplilearn_FrontEnd,
   JavaScript_Essential_1,
