@@ -4,7 +4,13 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  assetsInclude: ["**/*.JPG"]
+  // Ensure binary assets (including upper/lowercase variants) are treated as static assets during build
+  assetsInclude: [
+    "**/*.JPG",
+    "**/*.jpg",
+    "**/*.PNG",
+    "**/*.png"
+  ]
 })
 
 

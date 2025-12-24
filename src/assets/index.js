@@ -51,8 +51,8 @@ import todoone from "./Project/todoone.png";
 import todotwo from "./Project/todotwo.png";
 import todothree from "./Project/todothree.png";
 import financeApp from "./Project/finance-management.png";
-import weatherone from "./Project/weatherone.PNG";
-import weathertwo from "./Project/weathertwo.PNG";
+import weatherone from "./Project/weatherone.png";
+import weathertwo from "./Project/weathertwo.png";
 import codetec from "./Project/a1.mp4";
 
 
