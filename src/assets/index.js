@@ -45,7 +45,7 @@ import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
 
 // Projects
-import todofour from "./project/todofour.png"
+import todo from "./project/todo.png"
 import todoone from "./project/todoone.png"
 import todotwo from "./project/todotwo.png"
 import todothree from "./project/todothree.png"
@@ -125,7 +125,7 @@ export {
   stolid,
   
   // Projects
-  todofour,
+  todo,
   todoone,
   todotwo,
   todothree,
