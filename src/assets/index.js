@@ -52,7 +52,7 @@ import todothree from "./Project/todothree.png";
 import financeApp from "./Project/finance-management.png";
 import weatherone from "./Project/weatherone.PNG";
 import weathertwo from "./Project/weathertwo.PNG";
-import codetec from "./Project/a1.mp4";
+import codetec from "./Project/codetec.mp4";
 import stolidzone from "./Project/stolidzone.mp4"
 
 // Certificates
@@ -68,7 +68,7 @@ import Career_Essentials_Data_Analysis from "./Certificate/analysisbymicrosoft.J
 import Career_Essentials_Software_Development from "./Certificate/softwarebymicrosoft.JPG"
 
 // CV
-import My_Cv from "./My Cv/Muhammad Aman CV-2.pdf" 
+import My_Cv from "./My Cv/mycv.pdf" 
 import { ImRoad } from "react-icons/im";
 
 
