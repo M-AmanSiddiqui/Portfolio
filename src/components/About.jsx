@@ -41,11 +41,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-       I'm a skilled web developer with experience in JavaScript, 
-  specializing in frameworks like React and Node.js. I quickly learn and 
-  collaborate with clients to build efficient, scalable, and 
-  user-friendly web solutions. Let’s bring your ideas to life! 
-  I also handle data, visualize insights, and automate workflows efficiently
+       I am a Full Stack Web Developer and AI & Data Science Engineer dedicated to building modern,
+        intelligent web applications. With expertise in React, Node.js, and the MERN stack,
+         I focus on creating scalable, high-performance, and user-friendly solutions.
+
+        Beyond coding, I leverage AI and Data Science to extract insights from data,
+        automate complex workflows, and develop smart applications that drive real impact.
+        I love combining creativity with technology to solve problems and help clients bring their ideas to life.
+
       </motion.p>
 
       {/* Desktop view */}
