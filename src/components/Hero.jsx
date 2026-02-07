@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import My_Cv from "../assets/My Cv/mycv.pdf"; 
+import My_Cv from "../assets/My Cv/mycv.pdf"
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); 
