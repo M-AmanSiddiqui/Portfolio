@@ -37,6 +37,7 @@ import {
   // Companies
   smit,
   stolid,
+  kogents,
   
   // Projects
   todo,
@@ -216,6 +217,22 @@ const education = [
 
 const experiences = [
  
+  {
+  title: "AI Engineer Trainee",
+  company_name: "Stolidzone Technologies",
+  icon: kogents,
+  iconBg: "#FFFFFF",
+  date: "Jan 2025 - Feb 2025",
+  points: [
+    "Assisted in developing and fine-tuning AI agents for intelligent task automation and decision-making.",
+    "Worked on training, testing, and optimizing machine learning and natural language processing models for agent behavior.",
+    "Collaborated with senior AI engineers to integrate AI agents into existing platforms and workflows.",
+    "Researched and experimented with cutting-edge AI frameworks and tools to enhance agent performance and capabilities.",
+  ],
+},
+
+
+  
   {
     title: "Junior Frontend Developer",
     company_name: "Stolidzone Technologies",

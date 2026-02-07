@@ -43,6 +43,7 @@ import n8n from "./tech/n8n.png"
 // Companies
 import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
+import kogents from "./company/kogentsai_logo.jpg"
 
 // Projects
 import todo from "./Project/todo.png";
@@ -123,7 +124,7 @@ export {
   // Companies
   smit,
   stolid,
-  
+  kogents,
   // Projects
   todo,
   todoone,
