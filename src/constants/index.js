@@ -219,10 +219,10 @@ const experiences = [
  
   {
   title: "AI Engineer Trainee",
-  company_name: "Stolidzone Technologies",
+  company_name: "Kogents AI Agents",
   icon: kogents,
   iconBg: "#FFFFFF",
-  date: "Jan 2025 - Feb 2025",
+  date: "Jan 2026 - Present",
   points: [
     "Assisted in developing and fine-tuning AI agents for intelligent task automation and decision-making.",
     "Worked on training, testing, and optimizing machine learning and natural language processing models for agent behavior.",
