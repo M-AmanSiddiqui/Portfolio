@@ -1,4 +1,4 @@
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
@@ -26,7 +26,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast.error("❌ Please fill all fields before submitting.", {
+      toast.error("Please fill all fields before submitting.", {
         position: "bottom-center",
         autoClose: 3000,
         theme: "colored",
@@ -52,7 +52,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          toast.success("✅ Thank you! I will get back to you soon.", {
+          toast.success("Thank you! I will get back to you soon.", {
             position: "bottom-center",
             autoClose: 3000,
             theme: "colored",
@@ -62,7 +62,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-          toast.error("❌ Something went wrong. Please try again.", {
+          toast.error("Something went wrong. Please try again.", {
             position: "bottom-center",
             autoClose: 3000,
             theme: "colored",
@@ -72,10 +72,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="-mt-80 md:-mt-96 xl:mt-8 flex xl:flex-row flex-col-reverse overflow-hidden">
+    <div className="mt-4 flex w-full justify-center overflow-hidden sm:mt-8">
       <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        variants={slideIn("up", "tween", 0.2, 1)}
+        className="modern-surface accent-border w-full max-w-3xl rounded-2xl p-5 sm:p-8"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -83,61 +83,63 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="mt-8 flex flex-col gap-5 sm:mt-10 sm:gap-7"
         >
-           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+          <label className="flex flex-col">
+            <span className="mb-3 text-sm font-medium text-white sm:text-base">
+              Your Name
+            </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4 font-medium text-white outline-none transition placeholder:text-secondary focus:border-[#915EFF]/60 focus:bg-white/[0.07] sm:px-6"
               required
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email</span>
+            <span className="mb-3 text-sm font-medium text-white sm:text-base">
+              Your Email
+            </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="Enter your email address"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4 font-medium text-white outline-none transition placeholder:text-secondary focus:border-[#915EFF]/60 focus:bg-white/[0.07] sm:px-6"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className="mb-3 text-sm font-medium text-white sm:text-base">
+              Your Message
+            </span>
             <textarea
-              rows={7}
+              rows={6}
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="min-h-[160px] resize-y rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4 font-medium text-white outline-none transition placeholder:text-secondary focus:border-[#915EFF]/60 focus:bg-white/[0.07] sm:px-6"
               required
             />
           </label>
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-gradient-to-r from-[#00cea8] via-[#915EFF] to-[#ff6ec7] px-8 py-3 font-bold text-white outline-none shadow-[0_14px_35px_rgba(145,94,255,0.28)] transition hover:-translate-y-1 disabled:opacity-70 sm:w-fit"
+            disabled={loading}
           >
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      ></motion.div>
 
       <ToastContainer />
     </div>

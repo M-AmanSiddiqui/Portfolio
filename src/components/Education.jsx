@@ -18,12 +18,19 @@ const EducationCard = ({ edu }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "linear-gradient(145deg, rgba(21, 16, 48, 0.95), rgba(12, 11, 31, 0.96))",
+        border: "1px solid rgba(0, 206, 168, 0.18)",
+        borderRadius: "20px",
+        boxShadow: "0 22px 70px rgba(0, 0, 0, 0.28)",
         color: "#fff",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid rgba(0, 206, 168, 0.28)" }}
       date={edu.date}
-      iconStyle={{ background: edu.iconBg }}
+      iconStyle={{
+        background: edu.iconBg,
+        border: "4px solid rgba(0, 206, 168, 0.25)",
+        boxShadow: "0 0 35px rgba(0, 206, 168, 0.22)",
+      }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
@@ -35,7 +42,7 @@ const EducationCard = ({ edu }) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{edu.title}</h3>
+        <h3 className="text-white text-[22px] sm:text-[24px] font-bold leading-tight">{edu.title}</h3>
         <p
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
@@ -52,7 +59,7 @@ const EducationCard = ({ edu }) => {
         {edu.points.map((point, index) => (
           <li
             key={`education-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-white-100 text-[14px] leading-6 pl-1"
           >
             {point}
           </li>
@@ -66,7 +73,7 @@ const EducationCard = ({ edu }) => {
             {edu.points.map((point, index) => (
               <li
                 key={`education-point-mobile-${index}`}
-                className="text-white-100 text-[14px] pl-1 tracking-wider"
+                className="text-white-100 text-[14px] leading-6 pl-1"
               >
                 {point}
               </li>
@@ -75,7 +82,7 @@ const EducationCard = ({ edu }) => {
         )}
         <button
           onClick={() => setShowPoints(!showPoints)}
-          className="mt-2 text-sm text-[#7a4ee0] underline"
+          className="mt-4 rounded-full border border-[#00cea8]/30 px-4 py-2 text-sm text-[#b5fff2] transition hover:bg-[#00cea8]/10"
         >
           {showPoints ? "Show Less" : "Show More"}
         </button>
@@ -97,7 +104,7 @@ const Education = () => {
         </p>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
+      <div className="mt-12 flex flex-col sm:mt-16 lg:mt-20">
         <VerticalTimeline>
           {education.map((edu, index) => (
             <EducationCard key={`education-${index}`} edu={edu} />

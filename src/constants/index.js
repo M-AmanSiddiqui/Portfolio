@@ -33,6 +33,30 @@ import {
   numpy,
   pandas,
   n8n,
+  postgresql,
+  mysql,
+  restApis,
+  docker,
+  kubernetes,
+  aws,
+  googleCloud,
+  githubActions,
+  scikitLearn,
+  tensorflow,
+  pytorch,
+  opencv,
+  machineLearning,
+  generativeAi,
+  openai,
+  claude,
+  gemini,
+  langchain,
+  langgraph,
+  crewai,
+  rag,
+  aiAgents,
+  selenium,
+  postman,
   
   // Companies
   smit,
@@ -61,12 +85,17 @@ import {
   ProblemSolvingI,
   Career_Essentials_Software_Development,
   Career_Essentials_Data_Analysis,
+  Microsoft_Azure_AI_Essentials,
+  Microsoft_Copilot_For_Productivity,
+  Career_Essentials_Generative_AI,
+  Career_Essentials_Project,
+  Microsoft_Security_Essentials,
   
   // Misc
-  backend,
-  creator,
-  mobile,
-  web,
+  aiEngineer,
+  fullStackDeveloper,
+  intelligentAutomation,
+  technicalLeader,
 } from "../assets";
 
 
@@ -76,12 +105,12 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "education",
-    title: "Education",
-  },
-  {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
    
   {
@@ -105,20 +134,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
-    icon: mobile,
+    title: "AI-Powered Solutions",
+    icon: aiEngineer,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Web & SaaS Development",
+    icon: fullStackDeveloper,
   },
   {
-    title: "AI & Data Science Engineer",
-    icon: web,
+    title: "Intelligent Automation",
+    icon: intelligentAutomation,
   },
   {
-    title: "Intelligent Automation Engineer",
-    icon: creator,
+    title: "Technical Leadership",
+    icon: technicalLeader,
   },
 ];
 
@@ -134,7 +163,10 @@ const skills = [
   { name: "Node.js", icon: nodejs },
   { name: "Express.js", icon: expressjs },
   { name: "MongoDB", icon: mongodb },
+  { name: "PostgreSQL", icon: postgresql },
+  { name: "MySQL", icon: mysql },
   { name: "Firebase", icon: firebase },
+  { name: "REST APIs", icon: restApis },
   { name: "Bootstrap", icon: Bootstrap }, 
  
   { name: "Tailwind CSS", icon: tailwind },
@@ -147,12 +179,33 @@ const skills = [
 
   { name: "Git", icon: git },
   { name: "GitHub", icon: github },
+  { name: "Docker", icon: docker },
+  { name: "Kubernetes", icon: kubernetes },
+  { name: "AWS", icon: aws },
+  { name: "Google Cloud", icon: googleCloud },
+  { name: "GitHub Actions", icon: githubActions },
   { name: "Vercel", icon: vercel },
   { name: "Netlify", icon: netlify },
   { name: "Python", icon: python },
   { name: "Numpy", icon: numpy },
   { name: "Pandas", icon: pandas },
+  { name: "Scikit-Learn", icon: scikitLearn },
+  { name: "TensorFlow", icon: tensorflow },
+  { name: "PyTorch", icon: pytorch },
+  { name: "OpenCV", icon: opencv },
+  { name: "Machine Learning", icon: machineLearning },
+  { name: "Generative AI", icon: generativeAi },
+  { name: "OpenAI", icon: openai },
+  { name: "Claude", icon: claude },
+  { name: "Gemini", icon: gemini },
+  { name: "LangChain", icon: langchain },
+  { name: "LangGraph", icon: langgraph },
+  { name: "CrewAI", icon: crewai },
+  { name: "RAG", icon: rag },
+  { name: "AI Agents", icon: aiAgents },
   { name: "n8n", icon: n8n },
+  { name: "Selenium", icon: selenium },
+  { name: "Postman", icon: postman },
 
  
  
@@ -216,13 +269,26 @@ const education = [
 
 
 const experiences = [
- 
   {
-  title: "AI Engineer Trainee",
+  title: "Software Engineer & Team Lead",
   company_name: "Kogents AI Agents",
   icon: kogents,
   iconBg: "#FFFFFF",
-  date: "Jan 2026 - Present",
+  date: "Apr 2026 - Present",
+  points: [
+    "Leading end-to-end development of web applications, AI-powered solutions, and SaaS products from concept to production.",
+    "Driving system architecture, technical strategy, and product delivery for scalable, reliable, and high-impact digital products.",
+    "Managing development workflows while collaborating with developers, clients, and stakeholders to ship polished solutions on time.",
+    "Building performance-focused software systems that improve automation, reliability, and measurable business outcomes.",
+  ],
+},
+ 
+  {
+  title: "AI Engineer",
+  company_name: "Kogents AI Agents",
+  icon: kogents,
+  iconBg: "#FFFFFF",
+  date: "Jan 2026 - Apr 2026",
   points: [
     "Assisted in developing and fine-tuning AI agents for intelligent task automation and decision-making.",
     "Worked on training, testing, and optimizing machine learning and natural language processing models for agent behavior.",
@@ -261,6 +327,46 @@ const experiences = [
 
 
   const achievements = [
+    {
+      title: "Microsoft Azure AI Essentials",
+      provider: "Microsoft & LinkedIn Learning",
+      date: "June 20, 2026",
+      description: "Credential focused on core Azure AI concepts, responsible AI practices, and practical ways to apply Microsoft AI services in modern digital products.",
+      image: Microsoft_Azure_AI_Essentials,
+      link: "https://www.linkedin.com/learning/certificates/08a6c4b74d8ffadcdaf96cd5118b15b9f52e4de01118e855bc51d3c23777b7bf?trk=share_certificate",
+    },
+    {
+      title: "Microsoft Copilot for Productivity",
+      provider: "Microsoft & LinkedIn Learning",
+      date: "June 20, 2026",
+      description: "Certification covering Microsoft Copilot productivity workflows, AI-assisted collaboration, and effective use of generative AI across professional tasks.",
+      image: Microsoft_Copilot_For_Productivity,
+      link: "https://www.linkedin.com/learning/certificates/395632258ea0129763c065c2800ce5592b19369736a316aaba19afe0359ea09c?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B0zZQ8k8zRO6puXuICCE4TQ%3D%3D",
+    },
+    {
+      title: "Career Essentials in Generative AI",
+      provider: "Microsoft & LinkedIn Learning",
+      date: "June 20, 2026",
+      description: "Professional learning path covering generative AI fundamentals, responsible AI, prompt engineering, and practical AI use cases for modern work.",
+      image: Career_Essentials_Generative_AI,
+      link: "https://www.linkedin.com/learning/certificates/c4d3e7274ff662b5748ae2b221dc1870ea845dc189fae3a1defa825e719ebef8?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B0zZQ8k8zRO6puXuICCE4TQ%3D%3D",
+    },
+    {
+      title: "Career Essentials in Project Management",
+      provider: "Microsoft & LinkedIn Learning",
+      date: "June 20, 2026",
+      description: "Program focused on project planning, execution, stakeholder communication, workflow management, and delivery practices for successful product outcomes.",
+      image: Career_Essentials_Project,
+      link: "https://www.linkedin.com/learning/certificates/a63cd16d4135e4bf881f444dd4fd9ee0e13520508036261572285e7c0253362e?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B0zZQ8k8zRO6puXuICCE4TQ%3D%3D",
+    },
+    {
+      title: "Microsoft Security Essentials",
+      provider: "Microsoft & LinkedIn Learning",
+      date: "June 20, 2026",
+      description: "Credential covering security fundamentals, risk awareness, identity protection, and practical cybersecurity principles for reliable digital systems.",
+      image: Microsoft_Security_Essentials,
+      link: "",
+    },
 
     {
   title: "Career Essentials in Software Development",

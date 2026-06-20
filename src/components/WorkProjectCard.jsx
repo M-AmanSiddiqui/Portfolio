@@ -1,97 +1,22 @@
-// import React from "react";
-// import Tilt from "react-parallax-tilt";
-// import { motion } from "framer-motion";
-// import { fadeIn } from "../utils/motion";
-// import { github } from "../assets";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-// const ProjectCard = ({
-//   index,
-//   name,
-//   description,
-//   tags,
-//   images,
-//   source_code_link,
-//   live_demo_link,
-//   openModal,
-// }) => {
-//   return (
-//     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-//       <Tilt options={{ max: 45, scale: 1, speed: 450 }} className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
-//         <div className="relative w-full h-[230px] cursor-pointer" onClick={() => openModal(images, name, source_code_link)}>
-//           <Swiper
-//             modules={[Pagination, Autoplay]}
-//             spaceBetween={10}
-//             slidesPerView={1}
-//             loop={true}
-//             autoplay={{ delay: 2000, disableOnInteraction: false }}
-//             pagination={{ clickable: true }}
-//             className="w-full h-full rounded-2xl bg-black"
-//           >
-//             {images.map((img, i) => (
-//               <SwiperSlide key={i}>
-//                 <img
-//                   src={img}
-//                   alt={`${name}-${i}`}
-//                   className="w-full h-full object-contain rounded-2xl p-2 bg-black"
-//                 />
-//               </SwiperSlide>
-//             ))}
-//           </Swiper>
-
-//           {/* GitHub Button */}
-//           <div className="absolute top-2 right-2 z-20">
-//             <div
-//               onClick={(e) => {
-//                 e.stopPropagation();
-//                 window.open(source_code_link, "_blank");
-//               }}
-//               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg"
-//             >
-//               <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="mt-5">
-//           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-//           <p className="mt-2 text-secondary text-[14px]">{description}</p>
-//         </div>
-
-//         <div className="mt-4 flex flex-wrap gap-2">
-//           {tags.map((tag) => (
-//             <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
-//               #{tag.name}
-//             </p>
-//           ))}
-//         </div>
-
-//         {live_demo_link && (
-//           <button
-//             onClick={() => window.open(live_demo_link, "_blank")}
-//             className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg text-sm font-semibold shadow-md hover:opacity-90 transition"
-//           >
-//             🚀 Live Demo
-//           </button>
-//         )}
-//       </Tilt>
-//     </motion.div>
-//   );
-// };
-
-// export default ProjectCard;
-import React, { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
-import { github } from "../assets";
+import {
+  FaExternalLinkAlt,
+  FaPause,
+  FaPlay,
+  FaVolumeMute,
+  FaVolumeUp,
+} from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+
+import { fadeIn } from "../utils/motion";
+import { github } from "../assets";
+
+const isVideoAsset = (item) => item.endsWith(".mp4") || item.endsWith(".webm");
 
 const ProjectCard = ({
   index,
@@ -104,17 +29,15 @@ const ProjectCard = ({
   openModal,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const videoRef = useRef(null);
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [videoMuted, setVideoMuted] = useState(true);
+  const videoRef = useRef(null);
 
   const togglePlay = (e) => {
     e.stopPropagation();
     if (!videoRef.current) return;
 
     if (videoRef.current.paused) {
-      // User-initiated play: ensure sound is ON by default
       videoRef.current.muted = false;
       setVideoMuted(false);
       videoRef.current.play();
@@ -134,56 +57,51 @@ const ProjectCard = ({
   };
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.25, 0.75)}>
       <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        options={{ max: 18, scale: 1, speed: 450 }}
+        className="modern-surface accent-border w-full rounded-2xl p-3 transition duration-300 hover:-translate-y-2 sm:w-[360px] sm:p-4"
       >
-        {/* CARD CLICK */}
         <div
-          className="relative w-full h-[230px] cursor-pointer"
-          onClick={() =>
-            openModal(images, name, source_code_link, activeIndex)
-          }
+          className="relative h-[205px] w-full cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-black/40 sm:h-[230px] sm:rounded-2xl"
+          onClick={() => openModal(images, name, source_code_link, activeIndex)}
         >
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={10}
             slidesPerView={1}
             loop
-            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            autoplay={{ delay: 2200, disableOnInteraction: false }}
             pagination={{ clickable: true }}
-            className="w-full h-full rounded-2xl bg-black"
-            onSlideChange={(swiper) =>
-              setActiveIndex(swiper.realIndex)
-            }
+            className="h-full w-full bg-black"
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
             {images.map((item, i) => (
               <SwiperSlide key={i}>
-                {item.endsWith(".mp4") || item.endsWith(".webm") ? (
-                  <div className="relative w-full h-full">
+                {isVideoAsset(item) ? (
+                  <div className="relative h-full w-full">
                     <video
                       ref={videoRef}
                       src={item}
                       muted={videoMuted}
                       playsInline
-                      className="w-full h-full object-contain rounded-2xl bg-black"
-                      
+                      className="h-full w-full bg-black object-contain"
                     />
 
-                    {/* SMALL VIDEO CONTROLS */}
-                    <div className="absolute bottom-2 right-2 flex gap-2">
+                    <div className="absolute bottom-3 right-3 flex gap-2">
                       <button
                         onClick={togglePlay}
-                        className="bg-black bg-opacity-60 text-white px-2 py-1 rounded"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition hover:bg-[#915EFF]/60"
+                        aria-label={videoPlaying ? "Pause video" : "Play video"}
                       >
-                        {videoPlaying ? "⏸" : "▶"}
+                        {videoPlaying ? <FaPause size={13} /> : <FaPlay size={13} />}
                       </button>
                       <button
                         onClick={toggleMute}
-                        className="bg-black bg-opacity-60 text-white px-2 py-1 rounded"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur-md transition hover:bg-[#915EFF]/60"
+                        aria-label={videoMuted ? "Unmute video" : "Mute video"}
                       >
-                        {videoMuted ? "🔇" : "🔊"}
+                        {videoMuted ? <FaVolumeMute size={14} /> : <FaVolumeUp size={14} />}
                       </button>
                     </div>
                   </div>
@@ -191,58 +109,49 @@ const ProjectCard = ({
                   <img
                     src={item}
                     alt={`${name}-${i}`}
-                    className="w-full h-full object-contain rounded-2xl p-2 bg-black"
+                    className="h-full w-full bg-black p-2 object-contain"
                   />
                 )}
               </SwiperSlide>
             ))}
           </Swiper>
 
-          {/* GITHUB ICON */}
-          <div className="absolute top-2 right-2 z-20">
-            <div
+          <div className="absolute right-3 top-3 z-20">
+            <button
               onClick={(e) => {
                 e.stopPropagation();
                 window.open(source_code_link, "_blank");
               }}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg"
+              className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/60 shadow-lg backdrop-blur-md transition hover:scale-110 hover:bg-[#915EFF]/60"
+              aria-label="Open source code"
             >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+              <img src={github} alt="source code" className="h-1/2 w-1/2 object-contain" />
+            </button>
           </div>
         </div>
 
-        {/* TEXT */}
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">
-            {description}
-          </p>
+          <h3 className="text-[20px] font-bold leading-tight text-white sm:text-[22px]">{name}</h3>
+          <p className="mt-3 text-[13px] leading-6 text-secondary sm:text-[14px]">{description}</p>
         </div>
 
-        {/* TAGS */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[12px] font-medium ${tag.color}`}
             >
               #{tag.name}
             </p>
           ))}
         </div>
 
-        {/* LIVE DEMO */}
         {live_demo_link && (
           <button
             onClick={() => window.open(live_demo_link, "_blank")}
-            className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg text-sm font-semibold shadow-md hover:opacity-90 transition"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00cea8] via-[#915EFF] to-[#ff6ec7] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(145,94,255,0.28)] transition hover:-translate-y-1"
           >
-            🚀 Live Demo
+            Live Demo <FaExternalLinkAlt size={12} />
           </button>
         )}
       </Tilt>

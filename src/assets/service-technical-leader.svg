@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="leaderGradient" x1="47" y1="32" x2="213" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00CEA8"/>
+      <stop offset="0.52" stop-color="#915EFF"/>
+      <stop offset="1" stop-color="#FF6EC7"/>
+    </linearGradient>
+    <filter id="leaderGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.57 0 0 0 0 0.37 0 0 0 0 1 0 0 0 0.72 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="128" cy="80" r="35" fill="#11132D" stroke="url(#leaderGradient)" stroke-width="10" filter="url(#leaderGlow)"/>
+  <path d="M128 123c-35 0-64 25-69 58h138c-5-33-34-58-69-58z" fill="#11132D" stroke="url(#leaderGradient)" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="67" cy="116" r="23" fill="#11132D" stroke="#00CEA8" stroke-width="9"/>
+  <circle cx="189" cy="116" r="23" fill="#11132D" stroke="#FF6EC7" stroke-width="9"/>
+  <path d="M39 186c3-23 22-40 48-40M169 146c26 0 45 17 48 40" stroke="#2F2A5F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M95 58l33-24 33 24M128 34v37" stroke="#FACC15" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M101 170h54M114 196h28" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+</svg>

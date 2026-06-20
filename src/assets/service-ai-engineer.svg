@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="aiGradient" x1="51" y1="38" x2="207" y2="221" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00CEA8"/>
+      <stop offset="0.5" stop-color="#915EFF"/>
+      <stop offset="1" stop-color="#FF6EC7"/>
+    </linearGradient>
+    <filter id="aiGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.57 0 0 0 0 0.37 0 0 0 0 1 0 0 0 0.75 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="128" cy="128" r="86" fill="#11132D" stroke="url(#aiGradient)" stroke-width="10"/>
+  <path d="M91 88c-18 12-29 33-29 56 0 28 18 52 43 61M164 78c22 10 38 33 38 60 0 31-21 57-49 64" stroke="#2F2A5F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M84 141l42-37 45 26M126 104l8 63M84 141l50 26M171 130l-37 37" stroke="url(#aiGradient)" stroke-width="9" stroke-linecap="round" filter="url(#aiGlow)"/>
+  <circle cx="84" cy="141" r="16" fill="#00CEA8"/>
+  <circle cx="126" cy="104" r="17" fill="#915EFF"/>
+  <circle cx="171" cy="130" r="16" fill="#FF6EC7"/>
+  <circle cx="134" cy="167" r="18" fill="#FACC15"/>
+  <path d="M105 74c8-14 35-14 43 0M95 190c15 12 50 13 68 0" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+</svg>

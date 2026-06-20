@@ -8,6 +8,10 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
+import aiEngineer from "./service-ai-engineer.svg";
+import fullStackDeveloper from "./service-full-stack-developer.svg";
+import intelligentAutomation from "./service-intelligent-automation.svg";
+import technicalLeader from "./service-technical-leader.svg";
 // Education
 import BoardSecondary from "./Education/board of secondary karachi.jpg";
 import BoardIntermediate from "./Education/Board_of_Intermediate_Education,_Karachi_.png";
@@ -40,6 +44,30 @@ import python from "./tech/python.png"
 import numpy from "./tech/numpy.png"
 import pandas from "./tech/pandas.png"
 import n8n from "./tech/n8n.png"
+import postgresql from "./tech/postgresql.svg";
+import mysql from "./tech/mysql.svg";
+import restApis from "./tech/rest_apis.svg";
+import docker from "./tech/docker.svg";
+import kubernetes from "./tech/kubernetes.svg";
+import aws from "./tech/aws.svg";
+import googleCloud from "./tech/google_cloud.svg";
+import githubActions from "./tech/github_actions.svg";
+import scikitLearn from "./tech/scikit_learn.svg";
+import tensorflow from "./tech/tensorflow.svg";
+import pytorch from "./tech/pytorch.svg";
+import opencv from "./tech/opencv.svg";
+import machineLearning from "./tech/machine_learning.svg";
+import generativeAi from "./tech/generative_ai.svg";
+import openai from "./tech/openai.svg";
+import claude from "./tech/claude.svg";
+import gemini from "./tech/gemini.svg";
+import langchain from "./tech/langchain.svg";
+import langgraph from "./tech/langgraph.svg";
+import crewai from "./tech/crewai.svg";
+import rag from "./tech/rag.svg";
+import aiAgents from "./tech/ai_agents.svg";
+import selenium from "./tech/selenium.svg";
+import postman from "./tech/postman.svg";
 // Companies
 import smit from "./company/smit.png";
 import stolid from "./company/stolid.png";
@@ -67,6 +95,11 @@ import ProblemSolvingI from "./Certificate/problem-solving-inter.png"
 import Infotech_DIT from "./Certificate/DIT.jpg";
 import Career_Essentials_Data_Analysis from "./Certificate/analysisbymicrosoft.JPG"
 import Career_Essentials_Software_Development from "./Certificate/softwarebymicrosoft.JPG"
+import Microsoft_Azure_AI_Essentials from "./Certificate/Microsoft Azure AI Essentials.PNG";
+import Microsoft_Copilot_For_Productivity from "./Certificate/Microsoft Copilot for Productivity.PNG";
+import Career_Essentials_Generative_AI from "./Certificate/Career Essentials in Generative AI.PNG";
+import Career_Essentials_Project from "./Certificate/Career Essentials in Project.PNG";
+import Microsoft_Security_Essentials from "./Certificate/Microsoft Security Essentials.PNG";
 
 // CV
 import My_Cv from "./My Cv/mycv.pdf" 
@@ -84,6 +117,10 @@ export {
    creator,
    mobile,
    web,
+   aiEngineer,
+   fullStackDeveloper,
+   intelligentAutomation,
+   technicalLeader,
    
   //  CV
   My_Cv,
@@ -120,6 +157,30 @@ export {
   numpy,
   pandas,
   n8n,
+  postgresql,
+  mysql,
+  restApis,
+  docker,
+  kubernetes,
+  aws,
+  googleCloud,
+  githubActions,
+  scikitLearn,
+  tensorflow,
+  pytorch,
+  opencv,
+  machineLearning,
+  generativeAi,
+  openai,
+  claude,
+  gemini,
+  langchain,
+  langgraph,
+  crewai,
+  rag,
+  aiAgents,
+  selenium,
+  postman,
   
   // Companies
   smit,
@@ -145,6 +206,11 @@ export {
   ProblemSolvingB,
   ProblemSolvingI,
   Career_Essentials_Software_Development,
-  Career_Essentials_Data_Analysis
+  Career_Essentials_Data_Analysis,
+  Microsoft_Azure_AI_Essentials,
+  Microsoft_Copilot_For_Productivity,
+  Career_Essentials_Generative_AI,
+  Career_Essentials_Project,
+  Microsoft_Security_Essentials
 
 };

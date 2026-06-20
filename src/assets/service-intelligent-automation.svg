@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="automationGradient" x1="39" y1="31" x2="218" y2="225" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00CEA8"/>
+      <stop offset="0.5" stop-color="#915EFF"/>
+      <stop offset="1" stop-color="#FF6EC7"/>
+    </linearGradient>
+    <filter id="automationGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.57 0 0 0 0 0.37 0 0 0 0 1 0 0 0 0.72 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="42" y="42" width="172" height="172" rx="42" fill="#11132D" stroke="url(#automationGradient)" stroke-width="10"/>
+  <path d="M77 90h38c16 0 29 13 29 29v12c0 16 13 29 29 29h6" fill="none" stroke="#2F2A5F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M80 160h28c17 0 31-14 31-31v-1c0-17 14-31 31-31h9" fill="none" stroke="#2F2A5F" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="78" cy="90" r="18" fill="#00CEA8" filter="url(#automationGlow)"/>
+  <circle cx="78" cy="160" r="18" fill="#FF6EC7" filter="url(#automationGlow)"/>
+  <circle cx="180" cy="98" r="18" fill="#FACC15" filter="url(#automationGlow)"/>
+  <circle cx="180" cy="160" r="18" fill="#915EFF" filter="url(#automationGlow)"/>
+  <path d="M120 116l10-17 10 17 19 4-13 14 2 19-18-8-18 8 2-19-13-14 19-4z" fill="#FFFFFF"/>
+  <path d="M67 214h122" stroke="url(#automationGradient)" stroke-width="12" stroke-linecap="round"/>
+</svg>

@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { RiShareBoxFill } from "react-icons/ri";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 import { achievements } from "../constants";
 import { styles } from "../styles";
-import { RiShareBoxFill } from "react-icons/ri";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
 
 function Achievements() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -17,123 +19,135 @@ function Achievements() {
   useEffect(() => {
     document.body.style.overflow =
       selectedCertificate || showFullImage ? "hidden" : "auto";
+
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [selectedCertificate, showFullImage]);
 
   const CertificateCard = ({ cert }) => (
-    <motion.div
-      className="relative bg-[#11132d] p-4 sm:p-6 rounded-2xl shadow-xl border border-[#915EFF]/50 cursor-pointer 
-                 transition-transform transform hover:scale-105 hover:rotate-1 group overflow-hidden"
-      whileHover={{ scale: 1.05, rotate: 1 }}
-      whileTap={{ scale: 0.95 }}
+    <motion.button
+      type="button"
+      className="modern-surface accent-border group relative flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-xl p-3 text-left transition duration-300 hover:-translate-y-2 hover:border-[#915EFF]/50 sm:p-4"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       onClick={() => setSelectedCertificate(cert)}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent opacity-20 group-hover:opacity-50 transition-opacity"></div>
-      <img
-        src={cert.image}
-        alt={cert.title}
-        className="w-full h-52 sm:h-56 object-cover rounded-md mb-4"
-      />
-      <h2 className="text-lg sm:text-xl font-semibold text-white relative z-10">{cert.title}</h2>
-      <p className="text-sm text-[#915EFF] relative z-10 mt-2">{cert.provider} - {cert.date}</p>
-      <div className="absolute inset-0 rounded-2xl border-2 border-[#915EFF] opacity-10 group-hover:opacity-30 transition-opacity"></div>
-    </motion.div>
+      <div className="mb-4 flex h-44 w-full items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white p-2 sm:h-52">
+        <img
+          src={cert.image}
+          alt={cert.title}
+          loading="lazy"
+          className="h-full w-full object-contain transition duration-300 group-hover:scale-[1.03]"
+        />
+      </div>
+      <h2 className="relative z-10 text-base font-semibold leading-6 text-white sm:text-lg">
+        {cert.title}
+      </h2>
+      <p className="relative z-10 mt-2 text-sm leading-5 text-[#c9b8ff]">
+        {cert.provider} - {cert.date}
+      </p>
+    </motion.button>
   );
 
   return (
- <div className="bg-[#0a0a1a] text-white px-4 sm:px-6 md:px-10 py-4 sm:py-10 flex flex-col items-center">
-
-
-      {/* Heading & Subtext */}
-      <motion.div variants={textVariant()} className="w-full max-w-6xl">
-        <h2 className={`${styles.sectionHeadText} text-center text-2xl sm:text-3xl md:text-4xl`}>
-          Achievements
-        </h2>
-        <p className={`${styles.sectionSubText} text-center text-sm sm:text-base mt-4`}>
+    <div className="flex w-full flex-col items-center text-white">
+      <motion.div variants={textVariant()} className="w-full max-w-6xl text-center">
+        <h2 className={styles.sectionHeadText}>Achievements</h2>
+        <p className={`${styles.sectionSubText} mt-2`}>
           Certifications showcasing my expertise
         </p>
       </motion.div>
 
-      {/* Desktop Grid */}
-      <div className="mt-10 hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
-        {achievements.map((cert, index) => (
-          <CertificateCard key={index} cert={cert} />
+      <div className="mt-10 hidden w-full max-w-6xl grid-cols-1 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3">
+        {achievements.map((cert) => (
+          <CertificateCard key={cert.title} cert={cert} />
         ))}
       </div>
 
-      {/* Mobile Swiper */}
-      <div className="mt-4 md:hidden w-full max-w-md relative mb-4 sm:mb-6">
-        {/* Count / Fraction */}
-        <div className={`${styles.sectionSubText} text-center font-semibold mb-4`}>
-          {currentSlide} / {achievements.length}
+      <div className="mt-8 w-full max-w-sm md:hidden">
+        <div className="mb-4 flex justify-center">
+          <div className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md">
+            {currentSlide} / {achievements.length}
+          </div>
         </div>
 
         <Swiper
-          modules={[Autoplay]}
-          spaceBetween={20}
+          modules={[Autoplay, Pagination]}
+          spaceBetween={16}
           slidesPerView={1}
-          loop={true}
+          loop
           autoplay={{
-            delay: 0,
+            delay: 3200,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
-          speed={2000}
+          speed={650}
+          pagination={{ clickable: true, dynamicBullets: true }}
           onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
+          className="pb-10"
         >
-          {achievements.map((cert, index) => (
-            <SwiperSlide key={index}>
+          {achievements.map((cert) => (
+            <SwiperSlide key={cert.title} className="h-auto">
               <CertificateCard cert={cert} />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-      {/* Modal */}
       {selectedCertificate && (
         <motion.div
-          className="fixed inset-0 bg-black bg-opacity-100 flex items-center justify-center px-4 py-10 z-40 overflow-auto"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#050816]/95 p-3 backdrop-blur-xl sm:p-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setSelectedCertificate(null)}
         >
           <div
-            className="bg-[#11132d] p-6 sm:p-8 rounded-lg shadow-lg text-center w-full max-w-lg relative"
+            className="modern-surface accent-border max-h-[92svh] w-full max-w-2xl overflow-y-auto rounded-2xl p-4 text-center sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={selectedCertificate.image}
-              alt={selectedCertificate.title}
-              className="w-full h-auto max-h-60 object-cover rounded-md mb-4 cursor-pointer"
+            <button
+              type="button"
+              className="flex w-full items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-2"
               onClick={() => setShowFullImage(true)}
-            />
+            >
+              <img
+                src={selectedCertificate.image}
+                alt={selectedCertificate.title}
+                className="max-h-[48svh] w-full object-contain"
+              />
+            </button>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-[#915EFF]">
+            <h2 className="mt-5 text-xl font-semibold leading-7 text-white sm:text-2xl">
               {selectedCertificate.title}
             </h2>
-            <p className="text-white text-sm sm:text-base">
+            <p className="mt-2 text-sm text-[#c9b8ff] sm:text-base">
               {selectedCertificate.provider} - {selectedCertificate.date}
             </p>
-            <p className="text-gray-300 text-sm mt-2">{selectedCertificate.description}</p>
+            <p className="mt-3 text-sm leading-6 text-secondary">
+              {selectedCertificate.description}
+            </p>
 
-            <div className="mt-6 space-y-3 w-full">
+            <div className="mt-6 grid w-full gap-3 sm:grid-cols-2">
               {selectedCertificate.link?.trim() ? (
                 <a
                   href={selectedCertificate.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full border-2 border-white px-4 py-2 rounded-lg text-white hover:bg-white hover:text-[#11132d] transition text-center"
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00cea8] via-[#915EFF] to-[#ff6ec7] px-4 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(145,94,255,0.28)] transition hover:-translate-y-1"
                 >
-                  View Credential <RiShareBoxFill className="inline ml-1" />
+                  View Credential <RiShareBoxFill />
                 </a>
               ) : (
-                <p className="text-gray-400">No Credential Available</p>
+                <div className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-secondary">
+                  Credential link not added
+                </div>
               )}
 
               <button
-                className="block w-full bg-[#915EFF] px-4 py-2 rounded-lg text-white hover:bg-[#7a4ee0] transition"
+                type="button"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
                 onClick={() => setSelectedCertificate(null)}
               >
                 Close
@@ -143,10 +157,9 @@ function Achievements() {
         </motion.div>
       )}
 
-      {/* Full Image Modal */}
       {showFullImage && selectedCertificate && (
         <motion.div
-          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50"
+          className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/95 p-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -155,11 +168,10 @@ function Achievements() {
           <img
             src={selectedCertificate.image}
             alt={selectedCertificate.title}
-            className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+            className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
           />
         </motion.div>
       )}
-
     </div>
   );
 }

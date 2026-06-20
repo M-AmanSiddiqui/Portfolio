@@ -21,15 +21,23 @@ const Navbar = () => {
   // Lock scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = toggle ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [toggle]);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/70 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
+      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-50 transition-all duration-300`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div
+        className={`w-full flex justify-between items-center max-w-7xl mx-auto rounded-full border px-4 py-3 transition-all duration-300 ${
+          scrolled
+            ? "border-white/10 bg-[#070816]/80 shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+            : "border-white/5 bg-[#070816]/35 backdrop-blur-md"
+        }`}
+      >
         {/* Logo */}
         <Link
           to="/"
@@ -51,10 +59,10 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`relative font-medium cursor-pointer text-[16px] md:text-[17px] transition-all ${
+              className={`relative rounded-full px-3 py-2 font-medium cursor-pointer text-[14px] lg:text-[15px] transition-all ${
                 active === nav.title
-                  ? "text-white border-b-2 border-[#915EFF]"
-                  : "text-secondary hover:text-white"
+                  ? "bg-[#915EFF]/18 text-white shadow-[0_0_24px_rgba(145,94,255,0.18)]"
+                  : "text-secondary hover:bg-white/5 hover:text-white"
               }`}
               onClick={() => setActive(nav.title)}
             >
@@ -64,40 +72,48 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-8 h-8 object-contain cursor-pointer transition-transform transform hover:scale-110"
+        <div className="flex items-center justify-end md:hidden">
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5"
             onClick={() => setToggle(!toggle)}
-          />
+            aria-label={toggle ? "Close menu" : "Open menu"}
+          >
+            <img
+              src={toggle ? close : menu}
+              alt=""
+              className="h-6 w-6 object-contain transition-transform hover:scale-110"
+            />
+          </button>
         </div>
       </div>
 
       {/* Mobile Fullscreen Menu */}
       {toggle && (
-        <div className="fixed inset-0 z-[999] h-screen w-screen bg-black/90 backdrop-blur-sm flex flex-col justify-center items-center px-6">
+        <div className="fixed inset-0 z-[999] flex h-screen w-screen flex-col items-center justify-center overflow-y-auto bg-[#050816]/95 px-6 py-24 backdrop-blur-xl">
           {/* Close Button Top Right */}
           <button
-            className="absolute top-6 right-6"
+            type="button"
+            className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5"
             onClick={() => setToggle(false)}
+            aria-label="Close menu"
           >
             <img
               src={close}
-              alt="close"
-              className="w-8 h-8 object-contain hover:scale-110 transition-transform"
+              alt=""
+              className="h-6 w-6 object-contain transition-transform hover:scale-110"
             />
           </button>
 
           {/* Menu Items */}
-          <ul className="list-none flex flex-col gap-8 text-center">
+          <ul className="flex w-full max-w-xs list-none flex-col gap-3 text-center">
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-medium cursor-pointer text-[20px] ${
+                className={`cursor-pointer rounded-full px-7 py-3 text-[18px] font-medium transition ${
                   active === nav.title
-                    ? "text-white border-b-2 border-[#915EFF]"
-                    : "text-secondary hover:text-white"
+                    ? "bg-[#915EFF]/20 text-white"
+                    : "text-secondary hover:bg-white/5 hover:text-white"
                 }`}
                 onClick={() => {
                   setToggle(false);
